@@ -4,14 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clyde Snyders - 3D Portfolio</title>
-    <!-- Modern, Light, Vibrant Style -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-<!-- Three.js Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three-orbitcontrols-ts@0.1.2/lib/index.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/FontLoader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/geometries/TextGeometry.js"></script>
@@ -323,8 +321,7 @@
             <a href="#contact" class="nav-link">Contact</a>
         </div>
     </nav>
-<!-- The 3D hero section -->
-    <section id="home" class="hero" data-aos="fade-in">
+<section id="home" class="hero" data-aos="fade-in">
         <canvas id="three-canvas"></canvas>
         <div class="hero-content">
             <h1 class="hero-title">Clyde Snyders</h1>
@@ -339,8 +336,7 @@
             </div>
         </div>
     </section>
-<!-- Rest of the website content -->
-    <section id="about" class="section" data-aos="fade-up">
+<section id="about" class="section" data-aos="fade-up">
         <div class="section-title">About Me</div>
         <div class="section-subtitle">A driven and curious student, passionate about science, technology, and growth.</div>
         <div class="flex flex-col md:flex-row gap-12 items-center">
@@ -471,8 +467,7 @@
             <li><strong>Jan 2024:</strong> Joined Paterson High — Began my high school journey with a focus on academic excellence.</li>
         </ul>
     </section>
-<!-- New Daily Inspiration section -->
-    <section id="inspiration" class="section" data-aos="fade-up">
+<section id="inspiration" class="section" data-aos="fade-up">
         <div class="section-title">Daily Inspiration</div>
         <div class="section-subtitle">A little motivation to keep going.</div>
         <div class="max-w-xl mx-auto card text-center">
@@ -492,22 +487,18 @@
         <div class="section-title">Get In Touch</div>
         <div class="section-subtitle">I'm always open to new challenges and opportunities. Let's connect!</div>
         <div class="max-w-xl mx-auto card">
- <form
-  action="https://formspree.io/f/xgvlvvnn"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
+ <form id="contact-form" action="https://formspree.io/f/xgvlvvnn" method="POST" class="contact-form">
+  <label class="block mb-4">
+    <span class="text-gray-700">Your Email:</span>
+    <input type="email" name="email" class="mt-1 block w-full" placeholder="you@example.com" required>
   </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
+  <label class="block mb-4">
+    <span class="text-gray-700">Your Message:</span>
+    <textarea name="message" rows="4" class="mt-1 block w-full" placeholder="Let's build something amazing together!" required></textarea>
   </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
+  <button type="submit" class="w-full">Send Message</button>
 </form>
-            <div id="contact-success" class="contact-success">Thank you! Your message has been sent.</div>
+            <div id="contact-success" class="contact-success text-center">Thank you! Your message has been sent.</div>
             <div class="social-links">
                 <a href="mailto:clydesnyders723@gmail.com" class="social-link" title="Email"><i class="fa fa-envelope"></i></a>
                 <a href="tel:+27795779681" class="social-link" title="Phone"><i class="fa fa-phone"></i></a>
@@ -517,15 +508,14 @@
     </section>
 
   <footer class="footer">
-        <div>Paterson High — Port Elizabeth, Eastern Cape</div>
+        <div>Couldridge Rd, Schuaderville— Port Elizabeth, Eastern Cape</div>
         <div class="mt-2">Email: <a href="mailto:clydesnyders723@gmail.com">clydesnyders723@gmail.com</a></div>
         <div class="mt-2">Phone: <a href="tel:+27795779681">+27 79 577 9681</a></div>
-        <div class="mt-2">Instagram: <a href="https://www.instagram.com/c.snyders.05" target="_blank">c.snyders.05</a></div>
+        <div class="mt-2">Instagram: <a href="https://www.instagram.com/c.snyders.05" target="_blank">c.snyders.05 <i class="fab fa-instagram"></i></a></div>
         <div class="my-4 border-t border-gray-200"></div>
         <div>© 2025 — All rights reserved. Crafted for the future.</div>
     </footer>
-  <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         // AOS and existing website functionality
@@ -657,105 +647,45 @@ const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
             directionalLight.position.set(5, 5, 5);
             scene.add(directionalLight);
 
-            // Geometry and Materials
- const geometries = [
-                new THREE.TorusGeometry(1, 0.4, 16, 100),
-                new THREE.BoxGeometry(1.5, 1.5, 1.5),
-                new THREE.ConeGeometry(1, 2, 32),
-                new THREE.OctahedronGeometry(1.2),
-                new THREE.IcosahedronGeometry(1.3)
-            ];
-
- const materials = [
-                new THREE.MeshStandardMaterial({ color: 0x0052cc, metalness: 0.8, roughness: 0.1, transparent: true, opacity: 0.9 }),
-                new THREE.MeshStandardMaterial({ color: 0xfde68a, metalness: 0.5, roughness: 0.2, transparent: true, opacity: 0.9 }),
-                new THREE.MeshStandardMaterial({ color: 0x0d8fff, metalness: 0.6, roughness: 0.3, transparent: true, opacity: 0.9 }),
-                new THREE.MeshStandardMaterial({ color: 0x6b7280, metalness: 0.7, roughness: 0.4, transparent: true, opacity: 0.9 }),
-                new THREE.MeshStandardMaterial({ color: 0x22223b, metalness: 0.9, roughness: 0.5, transparent: true, opacity: 0.9 })
-            ];
-            
-   const objects = [];
-            for (let i = 0; i < 20; i++) {
-                const geometry = geometries[Math.floor(Math.random() * geometries.length)];
-                const material = materials[Math.floor(Math.random() * materials.length)];
-                const mesh = new THREE.Mesh(geometry, material);
-                      mesh.position.set(
-                    (Math.random() - 0.5) * 20,
-                    (Math.random() - 0.5) * 20,
-                    (Math.random() - 0.5) * 20
-                );
-                mesh.rotation.set(
-                    Math.random() * Math.PI,
-                    Math.random() * Math.PI,
-                    Math.random() * Math.PI
-                );
-    const scale = Math.random() * 0.5 + 0.5;
-                mesh.scale.set(scale, scale, scale);
-                      scene.add(mesh);
-                objects.push(mesh);
-            }
-            
-    // Raycaster for interaction
-    
-const raycaster = new THREE.Raycaster();
-            const mouse = new THREE.Vector2();
-            let highlightedObject = null;
-            const originalColors = new Map();
-
-            // Store original colors
- objects.forEach(obj => {
-                originalColors.set(obj.uuid, obj.material.color.getHex());
-            });
-
-            // Handle mouse move for hover effect
-  window.addEventListener('mousemove', (event) => {
-                mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-                mouse.y = -(event.clientY / (window.innerHeight * 0.8)) * 2 + 1; // Corrected for canvas height
-          raycaster.setFromCamera(mouse, camera);
-                const intersects = raycaster.intersectObjects(objects);
-       if (intersects.length > 0) {
-                    const intersectedObject = intersects[0].object;
-                    if (highlightedObject !== intersectedObject) {
-                        if (highlightedObject) {
-                            // Restore original color
-                            highlightedObject.material.color.setHex(originalColors.get(highlightedObject.uuid));
-                        }
-                        // Highlight the new object
-                        highlightedObject = intersectedObject;
-                        highlightedObject.material.color.setHex(0xffffff);
-                        document.body.style.cursor = 'pointer';
-                    }
-                } else {
-                    if (highlightedObject) {
-                        highlightedObject.material.color.setHex(originalColors.get(highlightedObject.uuid));
-                        highlightedObject = null;
-                        document.body.style.cursor = 'default';
-                    }
-                }
-            });
-
-            // Animation loop
-   const animate = function () {
-                requestAnimationFrame(animate);
-
-                // Rotate objects
-  objects.forEach(obj => {
-                    obj.rotation.x += 0.005;
-                    obj.rotation.y += 0.005;
+            // 3D Text Geometry for "PORTFOLIO"
+ const fontLoader = new THREE.FontLoader();
+            fontLoader.load('https://cdn.jsdelivr.net/npm/three@0.128.0/examples/fonts/helvetiker_bold.typeface.json', function (font) {
+                const textGeometry = new THREE.TextGeometry('PORTFOLIO', {
+                    font: font,
+                    size: 1,
+                    height: 0.2,
+                    curveSegments: 12,
+                    bevelEnabled: true,
+                    bevelThickness: 0.03,
+                    bevelSize: 0.02,
+                    bevelOffset: 0,
+                    bevelSegments: 5
                 });
-     renderer.render(scene, camera);
-            };
+                textGeometry.center();
+                const textMaterial = new THREE.MeshStandardMaterial({
+                    color: 0xfde68a,
+                    metalness: 0.8,
+                    roughness: 0.1
+                });
+                const textMesh = new THREE.Mesh(textGeometry, textMaterial);
+                scene.add(textMesh);
+
+                // Animation loop
+   const animate = function () {
+                    requestAnimationFrame(animate);
+                    textMesh.rotation.y += 0.005;
+                    renderer.render(scene, camera);
+                };
+                animate();
+            });
 
             // Handle window resize
-            
-function onWindowResize() {
+   function onWindowResize() {
                 camera.aspect = window.innerWidth / (window.innerHeight * 0.8);
                 camera.updateProjectionMatrix();
                 renderer.setSize(window.innerWidth, window.innerHeight * 0.8);
             }
             window.addEventListener('resize', onWindowResize, false);
-
- animate();
         };
     </script>
 </body>
