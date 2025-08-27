@@ -488,7 +488,8 @@
         <div class="section-subtitle">I'm always open to new challenges and opportunities. Let's connect!</div>
         <div class="max-w-xl mx-auto card">
             
-<form id="contact-form" action="https://formspree.io/f/xgvlvvnn" method="POST" class="contact-form"> 
+<form 
+    action="https://formspree.io/f/xgvlvvnn" method="POST" class="contact-form"> 
   <label class="block mb-4"> 
     <span class="text-gray-700">Your Email:</span> 
     <input type="email" name="email" class="mt-1 block w-full" placeholder="you@example.com" required> 
