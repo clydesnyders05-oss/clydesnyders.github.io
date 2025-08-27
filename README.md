@@ -492,12 +492,21 @@
         <div class="section-title">Get In Touch</div>
         <div class="section-subtitle">I'm always open to new challenges and opportunities. Let's connect!</div>
         <div class="max-w-xl mx-auto card">
-            <form id="contact-form" class="contact-form">
-                <input type="text" name="name" placeholder="Your Name" required />
-                <input type="email" name="email" placeholder="Your Email" required />
-                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+ <form
+  action="https://formspree.io/f/xgvlvvnn"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
             <div id="contact-success" class="contact-success">Thank you! Your message has been sent.</div>
             <div class="social-links">
                 <a href="mailto:clydesnyders723@gmail.com" class="social-link" title="Email"><i class="fa fa-envelope"></i></a>
