@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clyde Snyders - Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <title>Clyde Snyders - 3D Portfolio</title>
+    <!-- Modern, Light, Vibrant Style -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three-orbitcontrols-ts@0.1.2/lib/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/FontLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/geometries/TextGeometry.js"></script>
+
+  <style>
         :root {
             --primary: #0052cc;
             --secondary: #0d8fff;
@@ -23,115 +29,125 @@
         }
         body {
             font-family: var(--body-font);
-            background-color: var(--light-bg);
+            background: var(--light-bg);
             color: var(--text-main);
+            overflow-x: hidden; /* Prevents horizontal scroll from AOS */
         }
         nav {
+            background: white;
+            box-shadow: 0 2px 16px rgba(13,143,255,0.1);
+            border-bottom: 1px solid #e5e7eb;
             position: sticky;
             top: 0;
-            z-index: 50;
-            transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-        .nav-scrolled {
-            background-color: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px rgba(13,143,255,0.1);
+            z-index: 30;
         }
         .nav-link {
-            position: relative;
             color: var(--text-main);
             font-weight: 500;
-            padding: 0.5rem 1rem;
+            padding: 0.5em 1.2em;
             transition: color 0.2s;
         }
         .nav-link:hover {
             color: var(--secondary);
         }
-        .nav-link.active {
-            color: var(--primary);
-            font-weight: 700;
-        }
-        .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 40%;
-            height: 3px;
-            background-color: var(--primary);
-            border-radius: 99px;
-        }
+        /* 3D Hero Section Styling */
         .hero {
+            position: relative;
+            width: 100%;
+            height: 80vh; /* Set height for the 3D canvas */
             background: linear-gradient(120deg, #0d8fff 0%, #0052cc 100%);
-            color: white;
-            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .hero-bg {
+        #three-canvas {
             position: absolute;
             inset: 0;
-            opacity: 0.09;
-            background-image: url('https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=1400&q=80');
-            background-size: cover;
-            background-position: center;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        .hero-content {
+            position: absolute;
+            z-index: 10;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+            max-width: 600px;
         }
         .hero-title {
             font-family: var(--header-font);
-            font-size: clamp(2.5rem, 6vw, 3.5rem);
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 0.7em;
             background: linear-gradient(90deg, #fde68a, #fff, #0d8fff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .btn {
+        .hero-subtitle {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #fff;
+            margin-bottom: 2rem;
+            opacity: 0.85;
+        }
+        .hero-buttons a {
+            margin: 0 1em;
             padding: 0.8em 2em;
             border-radius: 8px;
             font-weight: 700;
             font-size: 1.1em;
             text-decoration: none;
-            transition: all 0.2s ease-in-out;
-            display: inline-block;
+            transition: background 0.2s, color 0.2s;
         }
-        .btn-primary {
+        .hero-buttons .primary {
             background: #fde68a;
             color: var(--primary);
             box-shadow: 0 2px 8px rgba(253,230,138,0.15);
         }
-        .btn-primary:hover {
+        .hero-buttons .primary:hover {
             background: #fff;
             color: var(--secondary);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(253,230,138,0.25);
         }
-        .btn-secondary {
+        .hero-buttons .secondary {
             background: transparent;
             color: #fff;
             border: 2px solid #fff;
         }
-        .btn-secondary:hover {
+        .hero-buttons .secondary:hover {
             background: #fff;
             color: var(--primary);
-            transform: translateY(-2px);
         }
         .section {
-            padding: 5rem 1.5rem;
+            padding: 4rem 1.5rem;
             max-width: 1100px;
             margin: 0 auto;
         }
         .section-title {
-            font-size: clamp(2rem, 5vw, 2.8rem);
+            font-size: 2.8rem;
             font-family: var(--header-font);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1.2rem;
             color: var(--primary);
+        }
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
         }
         .card {
             background: white;
             border-radius: 1.2em;
             padding: 2em;
-            box-shadow: 0 4px 25px rgba(0,82,204,0.07);
-            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 20px rgba(0,82,204,0.06);
+            margin-bottom: 1.5em;
+            transition: box-shadow 0.3s;
         }
         .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 40px rgba(13,143,255,0.12);
+            box-shadow: 0 4px 40px rgba(13,143,255,0.10);
         }
         .avatar {
             width: 190px;
@@ -139,403 +155,589 @@
             border-radius: 50%;
             border: 4px solid #fde68a;
             box-shadow: 0 0 20px rgba(13,143,255,0.11);
+            margin-bottom: 1.2em;
+        }
+        .stats-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+            justify-content: center;
+            margin-bottom: 2em;
+        }
+        .stat-card {
+            background: #f1f5f9;
+            padding: 1.5em 2em;
+            border-radius: 0.9em;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,82,204,0.06);
+            min-width: 120px;
+        }
+        .stat-title {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .stat-label {
+            font-size: 1em;
+            color: var(--text-light);
+        }
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2em;
+        }
+        .skill-bar-bg {
+            background: #e0e7ef;
+            border-radius: 999px;
+            height: 12px;
+            overflow: hidden;
+            margin-top: 6px;
         }
         .skill-bar {
+            height: 12px;
+            border-radius: 999px;
             background: linear-gradient(90deg, #0d8fff, #0052cc);
+            box-shadow: 0 2px 8px rgba(13,143,255,0.07);
+        }
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 2em;
+        }
+        .achievement-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+        .achievement-year {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5em;
+        }
+        /* Timeline */
+        .timeline-list {
+            border-left: 4px solid var(--primary);
+            padding-left: 2em;
+            margin-top: 2em;
+        }
+        .timeline-list li {
+            position: relative;
+            margin-bottom: 1.6em;
+            font-size: 1.1em;
         }
         .timeline-list li::before {
             content: '';
             position: absolute;
-            left: -2.25em; /* Adjusted for alignment */
-            top: 0.4em;
+            left: -2.1em;
+            top: 0.25em;
             width: 14px;
             height: 14px;
             border-radius: 50%;
             background: var(--accent);
-            border: 3px solid var(--primary);
+            border: 2px solid var(--primary);
+        }
+        /* Contact */
+        .contact-form input, .contact-form textarea {
+            background: #f1f5f9;
+            border: 1px solid #e0e7ef;
+            border-radius: 0.6em;
+            padding: 0.9em 1em;
+            width: 100%;
+            margin-bottom: 1em;
+            font-size: 1em;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: #e0e7ef;
         }
         .contact-form button {
             background: var(--secondary);
+            color: white;
+            font-weight: 700;
+            padding: 0.9em 2em;
+            border-radius: 0.7em;
+            border: none;
+            transition: background 0.2s;
         }
         .contact-form button:hover {
             background: var(--primary);
         }
+        .contact-success {
+            color: #10b981;
+            font-weight: 600;
+            margin-top: 1em;
+            display: none;
+        }
+        /* Footer */
+        .footer {
+            background: var(--primary);
+            color: #fff;
+            padding: 2.5em 1em;
+            text-align: center;
+            margin-top: 4em;
+        }
+        .footer a {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+            margin-top: 1em;
+        }
         .social-link {
-            color: var(--text-light);
-            font-size: 1.8em;
-            transition: color 0.2s, transform 0.2s;
+            color: var(--secondary);
+            font-size: 1.6em;
+            transition: color 0.2s;
         }
         .social-link:hover {
-            color: var(--primary);
-            transform: scale(1.1);
+            color: var(--accent);
         }
-        .footer {
-            background: var(--text-main);
+        .quote-container {
+            font-style: italic;
+            font-size: 1.2em;
+            margin-bottom: 1em;
+            color: var(--text-main);
+        }
+        .quote-author {
+            font-weight: 600;
+            text-align: right;
+            color: var(--text-light);
+            margin-top: 0.5em;
         }
     </style>
 </head>
-<body class="antialiased">
-
-<nav id="navbar" class="w-full flex items-center justify-between px-6 md:px-8 py-4">
-        <a href="#home" class="font-bold text-2xl" style="font-family: var(--header-font);">Clyde Snyders</a>
-        <div id="desktop-menu" class="hidden md:flex items-center space-x-2">
+<body>
+    <nav class="flex items-center justify-between px-8 py-4">
+        <div class="font-bold text-2xl" style="font-family: var(--header-font);">Clyde Snyders</div>
+        <div class="space-x-4 hidden md:inline-block">
             <a href="#home" class="nav-link">Home</a>
             <a href="#about" class="nav-link">About</a>
             <a href="#academics" class="nav-link">Academics</a>
             <a href="#achievements" class="nav-link">Achievements</a>
-            <a href="#future" class="nav-link">Future Focus</a>
             <a href="#timeline" class="nav-link">Trajectory</a>
+            <a href="#inspiration" class="nav-link">Inspiration</a>
             <a href="#contact" class="nav-link">Contact</a>
         </div>
-        <div class="md:hidden">
-            <button id="mobile-menu-button" class="text-2xl">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
     </nav>
-    <div id="mobile-menu" class="hidden md:hidden fixed top-0 left-0 w-full h-full bg-white z-40 flex flex-col items-center justify-center space-y-6 text-xl">
-        <button id="mobile-close-button" class="absolute top-6 right-6 text-3xl">&times;</button>
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#academics" class="nav-link">Academics</a>
-        <a href="#achievements" class="nav-link">Achievements</a>
-        <a href="#future" class="nav-link">Future Focus</a>
-        <a href="#timeline" class="nav-link">Trajectory</a>
-        <a href="#contact" class="nav-link">Contact</a>
-    </div>
-
-  <section id="home" class="hero relative flex items-center justify-center text-center p-4" data-aos="fade-in">
-        <div class="hero-bg"></div>
-        <div class="relative z-10">
-            <img src="http://googleusercontent.com/file_content/1" alt="Clyde Snyders" class="avatar mx-auto shadow-lg mb-6" />
-            <h1 class="hero-title font-bold">Clyde Snyders</h1>
-            <p class="hero-subtitle text-lg md:text-xl opacity-90 mb-8">
+<!-- The 3D hero section -->
+    <section id="home" class="hero" data-aos="fade-in">
+        <canvas id="three-canvas"></canvas>
+        <div class="hero-content">
+            <h1 class="hero-title">Clyde Snyders</h1>
+            <div class="hero-subtitle">
                 Grade 9 Student | Paterson High School | Eastern Cape
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#contact" class="btn btn-primary">Contact Me</a>
-                <a href="#" class="btn btn-secondary" download>Download CV</a>
             </div>
-            <div class="mt-8">
-                <span id="typing-effect" class="font-mono text-lg md:text-xl h-8 block"></span>
+            <div class="hero-buttons">
+                <a href="#contact" class="primary">Contact Me</a>
+                <a href="#" class="secondary" download>Download CV</a>
+            </div>
+            <div style="margin-top:2em;">
+                <span id="typing-effect" style="font-family:monospace; font-size:1.2em;"></span>
             </div>
         </div>
     </section>
-
-  <section id="about" class="section" data-aos="fade-up">
-        <div class="text-center mb-12">
-            <h2 class="section-title font-bold">About Me</h2>
-            <p class="text-lg text-gray-500 max-w-2xl mx-auto">A driven and curious student, passionate about science, technology, and growth.</p>
-        </div>
+<!-- Rest of the website content -->
+    <section id="about" class="section" data-aos="fade-up">
+        <div class="section-title">About Me</div>
+        <div class="section-subtitle">A driven and curious student, passionate about science, technology, and growth.</div>
         <div class="flex flex-col md:flex-row gap-12 items-center">
-            <div class="md:w-1/3 text-center" data-aos="fade-right">
-                <img src="http://googleusercontent.com/file_content/1" alt="Clyde Snyders" class="avatar mx-auto mb-6" />
+            <div class="md:w-1/3 text-center">
+                <img src="https://placehold.co/190x190/0052cc/ffffff?text=Clyde" alt="Clyde Snyders" class="avatar mx-auto mb-6" />
             </div>
-            <div class="md:w-2/3" data-aos="fade-left">
-                <p class="mb-6 text-lg">
+            <div class="md:w-2/3">
+                <p class="mb-6" style="font-size:1.13em;">
                     Hi, my name is Clyde Snyders and I am a grade 9 student at Paterson High School in the vibrant Eastern Cape. My journey is rooted in a love for learning, a curiosity for how things work, and a drive to make a difference. Whether it’s building robots, exploring physics, or collaborating on team projects, I believe every challenge is an opportunity for growth.
                 </p>
-                <div class="flex flex-wrap gap-4 justify-center md:justify-start mb-8">
-                    <div class="stat-card text-center bg-slate-100 p-4 rounded-xl min-w-[120px]">
-                        <div class="text-4xl font-bold text-[--primary] counter" data-count="81.1">0</div>
-                        <div class="text-sm text-gray-500">Avg. Mark</div>
+                <div class="stats-row">
+                    <div class="stat-card">
+                        <div class="stat-title counter" data-count="81.1">0</div>
+                        <div class="stat-label">Avg. Mark</div>
                     </div>
-                    <div class="stat-card text-center bg-slate-100 p-4 rounded-xl min-w-[120px]">
-                        <div class="text-4xl font-bold text-[--primary] counter" data-count="2">0</div>
-                        <div class="text-sm text-gray-500">Robotics Teams</div>
+                    <div class="stat-card">
+                        <div class="stat-title counter" data-count="2">0</div>
+                        <div class="stat-label">Robotics Teams</div>
                     </div>
-                    <div class="stat-card text-center bg-slate-100 p-4 rounded-xl min-w-[120px]">
-                        <div class="text-4xl font-bold text-[--primary] counter" data-count="2">0</div>
-                        <div class="text-sm text-gray-500">Science Expos</div>
+                    <div class="stat-card">
+                        <div class="stat-title counter" data-count="2">0</div>
+                        <div class="stat-label">Science Expos</div>
                     </div>
                 </div>
                 <h3 class="text-2xl font-bold mb-4" style="font-family:var(--header-font);">Core Skills</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="skills-grid">
                     <div>
-                        <div class="flex justify-between items-center mb-1"><span>Mathematics</span><span class="font-bold">92%</span></div>
-                        <div class="bg-gray-200 rounded-full h-3"><div class="skill-bar rounded-full h-3" style="width:92%"></div></div>
+                        <div class="flex justify-between items-center mb-1"><span>Mathematics</span><span>92%</span></div>
+                        <div class="skill-bar-bg"><div class="skill-bar" style="width:92%"></div></div>
                     </div>
                     <div>
-                        <div class="flex justify-between items-center mb-1"><span>Natural Science</span><span class="font-bold">81.5%</span></div>
-                        <div class="bg-gray-200 rounded-full h-3"><div class="skill-bar rounded-full h-3" style="width:81.5%"></div></div>
+                        <div class="flex justify-between items-center mb-1"><span>Natural Science</span><span>81.5%</span></div>
+                        <div class="skill-bar-bg"><div class="skill-bar" style="width:81.5%"></div></div>
                     </div>
                     <div>
-                        <div class="flex justify-between items-center mb-1"><span>Robotics</span><span class="font-bold">88%</span></div>
-                        <div class="bg-gray-200 rounded-full h-3"><div class="skill-bar rounded-full h-3" style="width:88%"></div></div>
+                        <div class="flex justify-between items-center mb-1"><span>Robotics</span><span>88%</span></div>
+                        <div class="skill-bar-bg"><div class="skill-bar" style="width:88%"></div></div>
                     </div>
                     <div>
-                        <div class="flex justify-between items-center mb-1"><span>Engineering Design</span><span class="font-bold">85%</span></div>
-                        <div class="bg-gray-200 rounded-full h-3"><div class="skill-bar rounded-full h-3" style="width:85%"></div></div>
+                        <div class="flex justify-between items-center mb-1"><span>Engineering Design</span><span>85%</span></div>
+                        <div class="skill-bar-bg"><div class="skill-bar" style="width:85%"></div></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
- <section id="academics" class="section bg-slate-50" data-aos="fade-up">
-        <div class="text-center mb-12">
-            <h2 class="section-title font-bold">Academic Performance</h2>
-            <p class="text-lg text-gray-500">My Grade 9 results reflect a commitment to excellence across diverse subjects.</p>
-        </div>
+ <section id="academics" class="section" data-aos="fade-up">
+        <div class="section-title">Academic Performance</div>
+        <div class="section-subtitle">My Grade 9 results reflect a commitment to excellence across diverse subjects.</div>
         <div class="card overflow-x-auto max-w-2xl mx-auto">
             <table class="w-full text-left">
-                <thead><tr class="border-b border-gray-200"><th class="py-3 px-4">Subject</th><th class="py-3 px-4 text-right">Score (%)</th></tr></thead>
+                <thead>
+                    <tr class="border-b border-gray-200">
+                        <th class="py-2 px-4">Subject</th>
+                        <th class="py-2 px-4">Score (%)</th>
+                    </tr>
+                </thead>
                 <tbody>
-                    <tr class="border-b"><td class="py-3 px-4">Mathematics</td><td class="py-3 px-4 font-bold text-right"><span class="counter" data-count="92">0</span>%</td></tr>
-                    <tr class="border-b"><td class="py-3 px-4">Natural Science</td><td class="py-3 px-4 font-bold text-right"><span class="counter" data-count="81.5">0</span>%</td></tr>
-                    <tr class="border-b"><td class="py-3 px-4">Social Science</td><td class="py-3 px-4 font-bold text-right"><span class="counter" data-count="95.5">0</span>%</td></tr>
-                    <tr class="border-b"><td class="py-3 px-4">Technology</td><td class="py-3 px-4 font-bold text-right"><span class="counter" data-count="87.5">0</span>%</td></tr>
-                    <tr class="border-b"><td class="py-3 px-4">EMS</td><td class="py-3 px-4 font-bold text-right"><span class="counter" data-count="83.79">0</span>%</td></tr>
-                    <tr class="border-b"><td class="py-3 px-4">Creative Arts</td><td class="py-3 px-4 font-bold text-right"><span class="counter" data-count="82.22">0</span>%</td></tr>
-                    <tr class="border-b"><td class="py-3 px-4">English</td><td class="py-3 px-4 font-bold text-right"><span class="counter" data-count="74">0</span>%</td></tr>
-                    <tr><td class="py-3 px-4">Afrikaans</td><td class="py-3 px-4 font-bold text-right"><span class="counter" data-count="72">0</span>%</td></tr>
+                    <tr><td class="py-2 px-4">Mathematics</td><td class="py-2 px-4 font-bold"><span class="counter" data-count="92">0</span>%</td></tr>
+                    <tr><td class="py-2 px-4">Natural Science</td><td class="py-2 px-4 font-bold"><span class="counter" data-count="81.5">0</span>%</td></tr>
+                    <tr><td class="py-2 px-4">Social Science</td><td class="py-2 px-4 font-bold"><span class="counter" data-count="95.5">0</span>%</td></tr>
+                    <tr><td class="py-2 px-4">Technology</td><td class="py-2 px-4 font-bold"><span class="counter" data-count="87.5">0</span>%</td></tr>
+                    <tr><td class="py-2 px-4">EMS</td><td class="py-2 px-4 font-bold"><span class="counter" data-count="83.79">0</span>%</td></tr>
+                    <tr><td class="py-2 px-4">Creative Arts</td><td class="py-2 px-4 font-bold"><span class="counter" data-count="82.22">0</span>%</td></tr>
+                    <tr><td class="py-2 px-4">English</td><td class="py-2 px-4 font-bold"><span class="counter" data-count="74">0</span>%</td></tr>
+                    <tr><td class="py-2 px-4">Afrikaans</td><td class="py-2 px-4 font-bold"><span class="counter" data-count="72">0</span>%</td></tr>
                 </tbody>
             </table>
         </div>
     </section>
 
  <section id="achievements" class="section" data-aos="fade-up">
-        <div class="text-center mb-12">
-            <h2 class="section-title font-bold">Key Achievements</h2>
-            <p class="text-lg text-gray-500">Milestones from national and international competitions.</p>
+        <div class="section-title">Key Achievements</div>
+        <div class="section-subtitle">Milestones from national and international competitions.</div>
+        <div class="achievements-grid">
+            <div class="card" data-aos="zoom-in">
+                <div class="achievement-title">Gold Medal: Regional Science Expo</div>
+                <div class="achievement-year">2025</div>
+                <p>Awarded a gold medal for the second consecutive year and won Best Category in Physics. Showcased a passion for experimentation and discovery.</p>
+            </div>
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="achievement-title">Gold Medal: Springbots Robotics</div>
+                <div class="achievement-year">2025</div>
+                <p>Won gold at the regional Springbots robotics competition, later placing 6th nationally. Led a team in designing and programming innovative robots.</p>
+            </div>
+            <div class="card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="achievement-title">Bronze Medal: Int'l Science Fair</div>
+                <div class="achievement-year">2024</div>
+                <p>Secured a bronze in the 'Engineering' category at ISF, competing with top students globally. Demonstrated creativity and resilience under pressure.</p>
+            </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="card" data-aos="zoom-in"><div class="flex items-start gap-4"><i class="fas fa-medal text-3xl text-[--accent]"></i><div><h3 class="text-xl font-bold text-[--secondary]">Gold Medal: Regional Science Expo</h3><div class="font-semibold text-[--primary] mb-2">2025</div><p>Awarded a gold medal for the second consecutive year and won Best Category in Physics. Showcased a passion for experimentation.</p></div></div></div>
-            <div class="card" data-aos="zoom-in" data-aos-delay="100"><div class="flex items-start gap-4"><i class="fas fa-robot text-3xl text-[--accent]"></i><div><h3 class="text-xl font-bold text-[--secondary]">Gold Medal: Springbots Robotics</h3><div class="font-semibold text-[--primary] mb-2">2025</div><p>Won gold at the regional Springbots robotics competition, later placing 6th nationally. Led a team in designing innovative robots.</p></div></div></div>
-            <div class="card" data-aos="zoom-in" data-aos-delay="200"><div class="flex items-start gap-4"><i class="fas fa-globe text-3xl text-[--accent]"></i><div><h3 class="text-xl font-bold text-[--secondary]">Bronze Medal: Int'l Science Fair</h3><div class="font-semibold text-[--primary] mb-2">2024</div><p>Secured a bronze in 'Engineering' at ISF, competing with top students globally. Demonstrated creativity and resilience under pressure.</p></div></div></div>
-            <div class="card" data-aos="zoom-in" data-aos-delay="300"><div class="flex items-start gap-4"><i class="fas fa-trophy text-3xl text-[--accent]"></i><div><h3 class="text-xl font-bold text-[--secondary]">Bronze Medal: World Robot Olympiad</h3><div class="font-semibold text-[--primary] mb-2">2024</div><p>Achieved a bronze at WRO, representing the Eastern Cape internationally and collaborating with diverse teams.</p></div></div></div>
-            <div class="card" data-aos="zoom-in" data-aos-delay="400"><div class="flex items-start gap-4"><i class="fas fa-atom text-3xl text-[--accent]"></i><div><h3 class="text-xl font-bold text-[--secondary]">Best Category Award: Physics</h3><div class="font-semibold text-[--primary] mb-2">2025</div><p>Recognized for excellence in Physics, reflecting a deep understanding of fundamental concepts and problem-solving skills.</p></div></div></div>
-        </div>
-    </section>
-
-  <section id="future" class="section bg-slate-50" data-aos="fade-up">
-        <div class="text-center mb-12">
-            <h2 class="section-title font-bold">Future Focus & AI Insights</h2>
-            <p class="text-lg text-gray-500 max-w-2xl mx-auto">Connecting today's skills with tomorrow's possibilities.</p>
-        </div>
-        <div class="card max-w-4xl mx-auto p-8 bg-[--text-main] text-white">
-            <div class="flex flex-col md:flex-row gap-8 items-center">
-                <div class="text-center md:text-left">
-                    <h3 class="text-2xl font-bold mb-4 text-[--accent]" style="font-family:var(--header-font);">My Ambition</h3>
-                    <p class="mb-6 opacity-90">
-                        I am driven to explore the intersection of robotics, software, and physics. My goal is to pursue a career in Mechatronics Engineering, where I can build intelligent systems that solve real-world problems. I am passionate about sustainable technology and believe in the power of automation to improve lives.
-                    </p>
-                </div>
-                <div class="w-full md:w-2/3 md:border-l-2 border-[--secondary] md:pl-8">
-                    <h4 class="font-bold text-lg mb-4 text-white"><i class="fas fa-lightbulb mr-2 text-[--accent]"></i>Gemini-Inspired Analysis:</h4>
-                    <div class="bg-gray-700 p-4 rounded-lg">
-                        <p class="font-mono text-sm text-gray-300">
-                            <span class="text-green-400">> Analyzing skill profile...</span><br>
-                            > High proficiency in <strong class="text-cyan-400">Mathematics (92%)</strong> and <strong class="text-cyan-400">Robotics (88%)</strong> indicates a strong aptitude for algorithmic problem-solving and systems thinking.
-                            <br><br>
-                            > <strong class="text-yellow-400">Projected Trajectory:</strong> Excellent candidate for specialized fields like <strong class="text-white">Mechatronics Engineering</strong>, <strong class="text-white">AI Development</strong>, and <strong class="text-white">Computational Physics</strong>.
-                        </p>
-                    </div>
-                </div>
+        <div class="achievements-grid">
+            <div class="card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="achievement-title">Bronze Medal: World Robot Olympiad</div>
+                <div class="achievement-year">2024</div>
+                <p>Achieved a bronze at WRO, representing the Eastern Cape internationally and collaborating with diverse teams.</p>
+            </div>
+            <div class="card" data-aos="zoom-in" data-aos-delay="400">
+                <div class="achievement-title">Best Category Award: Physics</div>
+                <div class="achievement-year">2025</div>
+                <p>Recognized for excellence in Physics, reflecting a deep understanding of fundamental concepts and problem-solving skills.</p>
             </div>
         </div>
     </section>
 
- <section id="timeline" class="section" data-aos="fade-up">
-        <div class="text-center mb-12">
-            <h2 class="section-title font-bold">My Trajectory</h2>
-            <p class="text-lg text-gray-500">Key milestones shaping my high school journey.</p>
-        </div>
-        <div class="max-w-2xl mx-auto">
-            <ul class="timeline-list border-l-4 border-[--primary] pl-8">
-                <li class="mb-6"><strong class="text-lg">Aug 2025:</strong> Repeat Gold at Regional Science Fair — Won a second gold and Best Category award in Physics.</li>
-                <li class="mb-6"><strong class="text-lg">Jun 2025:</strong> 6th Place at National Springbots — Secured a sixth-place finish nationally.</li>
-                <li class="mb-6"><strong class="text-lg">May 2025:</strong> Gold at Regional Springbots — Won the gold medal at regional robotics.</li>
-                <li class="mb-6"><strong class="text-lg">Dec 2024:</strong> Bronze at World Robot Olympiad (WRO) — Achieved a bronze medal in robotics.</li>
-                <li class="mb-6"><strong class="text-lg">Oct 2024:</strong> Bronze at International Science Fair (ISF) — Won a bronze medal in engineering.</li>
-                <li class="mb-6"><strong class="text-lg">Aug 2024:</strong> Gold at Regional Science Fair — In my first year participating, I secured a gold medal.</li>
-                <li class="mb-6"><strong class="text-lg">Jan 2024:</strong> Joined Paterson High — Began my high school journey with a focus on academic excellence.</li>
-            </ul>
+   <section id="timeline" class="section" data-aos="fade-up">
+        <div class="section-title">My Trajectory</div>
+        <div class="section-subtitle">Key milestones shaping my high school journey.</div>
+        <ul class="timeline-list">
+            <li><strong>Aug 2025:</strong> Repeat Gold at Regional Science Fair — Won a second gold and Best Category award in Physics.</li>
+            <li><strong>Jun 2025:</strong> 6th Place at National Springbots — Secured a sixth-place finish nationally.</li>
+            <li><strong>May 2025:</strong> Gold at Regional Springbots — Won the gold medal at regional robotics.</li>
+            <li><strong>Dec 2024:</strong> Bronze at World Robot Olympiad (WRO) — Achieved a bronze medal in robotics.</li>
+            <li><strong>Oct 2024:</strong> Bronze at International Science Fair (ISF) — Won a bronze medal in engineering.</li>
+            <li><strong>Aug 2024:</strong> Gold at Regional Science Fair — In my first year participating, I secured a gold medal.</li>
+            <li><strong>Jan 2024:</strong> Joined Paterson High — Began my high school journey with a focus on academic excellence.</li>
+        </ul>
+    </section>
+<!-- New Daily Inspiration section -->
+    <section id="inspiration" class="section" data-aos="fade-up">
+        <div class="section-title">Daily Inspiration</div>
+        <div class="section-subtitle">A little motivation to keep going.</div>
+        <div class="max-w-xl mx-auto card text-center">
+            <div id="quote-container" class="quote-container">
+                "The future belongs to those who believe in the beauty of their dreams."
+            </div>
+            <div id="quote-author" class="quote-author">
+                - Eleanor Roosevelt
+            </div>
+            <button id="generate-quote-btn" class="mt-4 px-6 py-2 bg-secondary text-white font-bold rounded-lg transition-colors duration-200 hover:bg-primary">
+                Generate a new quote
+            </button>
         </div>
     </section>
 
-  <section id="contact" class="section bg-slate-50" data-aos="fade-up">
-        <div class="text-center mb-12">
-            <h2 class="section-title font-bold">Get In Touch</h2>
-            <p class="text-lg text-gray-500">I'm always open to new challenges and opportunities. Let's connect!</p>
-        </div>
-        <div class="max-w-xl mx-auto card p-8">
-             <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
-                <input class="w-full bg-slate-100 border border-gray-200 rounded-lg p-3 mb-4 focus:outline-none focus:border-[--primary]" type="text" name="name" placeholder="Your Name" required />
-                <input class="w-full bg-slate-100 border border-gray-200 rounded-lg p-3 mb-4 focus:outline-none focus:border-[--primary]" type="email" name="email" placeholder="Your Email" required />
-                <textarea class="w-full bg-slate-100 border border-gray-200 rounded-lg p-3 mb-4 focus:outline-none focus:border-[--primary]" name="message" placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit" class="w-full btn btn-primary text-white bg-[--secondary] hover:bg-[--primary]">Send Message</button>
+ <section id="contact" class="section" data-aos="fade-up">
+        <div class="section-title">Get In Touch</div>
+        <div class="section-subtitle">I'm always open to new challenges and opportunities. Let's connect!</div>
+        <div class="max-w-xl mx-auto card">
+            <form id="contact-form" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
             </form>
-            <div id="contact-success" class="text-green-600 font-semibold mt-4 text-center" style="display: none;">Thank you! Your message has been sent.</div>
-            
-   <div class="text-center mt-8">
-                <p class="text-gray-500 mb-4">Or reach out directly:</p>
-                <div class="flex justify-center items-center gap-8">
-                    <a href="mailto:clydesnyders723@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
-                    <a href="tel:+27795779681" class="social-link" title="Phone"><i class="fas fa-phone"></i></a>
-                    <a href="https://www.instagram.com/c.snyders.05" class="social-link" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                </div>
+            <div id="contact-success" class="contact-success">Thank you! Your message has been sent.</div>
+            <div class="social-links">
+                <a href="mailto:clydesnyders723@gmail.com" class="social-link" title="Email"><i class="fa fa-envelope"></i></a>
+                <a href="tel:+27795779681" class="social-link" title="Phone"><i class="fa fa-phone"></i></a>
+                <a href="https://www.instagram.com/c.snyders.05" class="social-link" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a>
             </div>
         </div>
     </section>
 
-   <footer class="footer text-white text-center py-10 px-4">
-        <div class="max-w-4xl mx-auto">
-            <p class="font-bold text-lg">Paterson High — Port Elizabeth, Eastern Cape</p>
-            <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-4">
-                <a href="mailto:clydesnyders723@gmail.com" class="hover:text-[--accent] transition-colors">clydesnyders723@gmail.com</a>
-                <a href="tel:+27795779681" class="hover:text-[--accent] transition-colors">+27 79 577 9681</a>
-                <a href="https://www.instagram.com/c.snyders.05" target="_blank" class="hover:text-[--accent] transition-colors">@c.snyders.05</a>
-            </div>
-            <div class="my-6 border-t border-gray-600"></div>
-            <p>© 2025 — All rights reserved. Crafted for the future.</p>
-        </div>
+  <footer class="footer">
+        <div>Paterson High — Port Elizabeth, Eastern Cape</div>
+        <div class="mt-2">Email: <a href="mailto:clydesnyders723@gmail.com">clydesnyders723@gmail.com</a></div>
+        <div class="mt-2">Phone: <a href="tel:+27795779681">+27 79 577 9681</a></div>
+        <div class="mt-2">Instagram: <a href="https://www.instagram.com/c.snyders.05" target="_blank">c.snyders.05</a></div>
+        <div class="my-4 border-t border-gray-200"></div>
+        <div>© 2025 — All rights reserved. Crafted for the future.</div>
     </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
+  <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // AOS and existing website functionality
         document.addEventListener('DOMContentLoaded', () => {
-            // Animate On Scroll (AOS) Init
-            AOS.init({ once: true, duration: 900, offset: 50 });
-
-            // Advanced Navigation Logic
-            const navbar = document.getElementById('navbar');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileCloseButton = document.getElementById('mobile-close-button');
-            const desktopMenuLinks = document.querySelectorAll('#desktop-menu .nav-link, #mobile-menu .nav-link');
-            const sections = document.querySelectorAll('section');
-
-            // Nav background on scroll
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('nav-scrolled');
-                } else {
-                    navbar.classList.remove('nav-scrolled');
-                }
-            });
-
-            // Mobile menu toggle
-            const toggleMobileMenu = () => mobileMenu.classList.toggle('hidden');
-            mobileMenuButton.addEventListener('click', toggleMobileMenu);
-            mobileCloseButton.addEventListener('click', toggleMobileMenu);
-            
-            // Close mobile menu on link click
-            desktopMenuLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        toggleMobileMenu();
-                    }
-                });
-            });
-
-            // Scrollspy for active nav link
-            const observerOptions = { root: null, rootMargin: '0px', threshold: 0.4 };
-            const sectionObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const id = entry.target.getAttribute('id');
-                        document.querySelectorAll('.nav-link').forEach(link => {
-                            link.classList.remove('active');
-                            if (link.getAttribute('href') === `#${id}`) {
-                                link.classList.add('active');
-                            }
-                        });
-                    }
-                });
-            }, observerOptions);
-            sections.forEach(section => sectionObserver.observe(section));
-
+            // Animate On Scroll Init
+            AOS.init({ once: true, duration: 900 });
 
             // Animated Counters
-            const counterObserver = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const el = entry.target;
-                        const target = parseFloat(el.dataset.count);
-                        const decimals = target % 1 !== 0 ? 2 : 0;
-                        let count = 0;
-                        const duration = 1500; // ms
-                        const frameRate = 60; // fps
-                        const totalFrames = Math.round((duration / 1000) * frameRate);
-                        const increment = target / totalFrames;
-
-                        const updateCount = () => {
-                            count += increment;
-                            if (count < target) {
-                                el.textContent = decimals ? count.toFixed(decimals) : Math.round(count);
-                                requestAnimationFrame(updateCount);
-                            } else {
-                                el.textContent = target.toFixed(decimals);
+  const animateCounters = () => {
+                const counters = document.querySelectorAll('.counter');
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const el = entry.target;
+                            let count = 0;
+                            let target = parseFloat(el.dataset.count);
+                            let decimals = target % 1 !== 0 ? 2 : 0;
+                            let increment = target / 60;
+                            const update = () => {
+                                count += increment;
+                                if (count < target) {
+                                    el.textContent = decimals ? count.toFixed(decimals) : Math.round(count);
+                                    requestAnimationFrame(update);
+                                } else {
+                                    el.textContent = target;
+                                }
                             }
+                            update();
+                            observer.unobserve(el);
                         }
-                        updateCount();
-                        counterObserver.unobserve(el);
-                    }
-                });
-            }, { threshold: 0.6 });
-            document.querySelectorAll('.counter').forEach(counter => counterObserver.observe(counter));
+                    });
+                }, { threshold: 0.6 });
+                counters.forEach(counter => observer.observe(counter));
+            };
+            animateCounters();
 
             // Hero Typing Effect
-            const typeWriter = () => {
+ const typeWriter = () => {
                 const el = document.getElementById('typing-effect');
-                if (!el) return;
-                const phrases = ["Curious. Ambitious. Always improving.", "Science. Robotics. Teamwork.", "Chasing greater.", "Let's build something amazing together!"];
-                let phraseIndex = 0, charIndex = 0, isDeleting = false;
-
+                const phrases = [
+                    "Curious. Ambitious. Always improving.",
+                    "Science. Robotics. Teamwork.",
+                    "Chasing greater.",
+                    "Let's build something amazing together!"
+                ];
+                let phraseIndex = 0;
+                let charIndex = 0;
+                let typing = true;
                 function type() {
-                    const currentPhrase = phrases[phraseIndex];
-                    if (isDeleting) {
-                        el.textContent = currentPhrase.substring(0, charIndex - 1);
-                        charIndex--;
-                    } else {
-                        el.textContent = currentPhrase.substring(0, charIndex + 1);
+                    if (charIndex < phrases[phraseIndex].length && typing) {
+                        el.innerHTML += phrases[phraseIndex][charIndex];
                         charIndex++;
+                        setTimeout(type, 80);
+                    } else {
+                        typing = false;
+                        setTimeout(() => {
+                            el.innerHTML = "";
+                            charIndex = 0;
+                            phraseIndex = (phraseIndex + 1) % phrases.length;
+                            typing = true;
+                            type();
+                        }, 1800);
                     }
-
-                    if (!isDeleting && charIndex === currentPhrase.length) {
-                        setTimeout(() => isDeleting = true, 1800);
-                    } else if (isDeleting && charIndex === 0) {
-                        isDeleting = false;
-                        phraseIndex = (phraseIndex + 1) % phrases.length;
-                    }
-
-                    const typingSpeed = isDeleting ? 40 : 80;
-                    setTimeout(type, typingSpeed);
                 }
                 type();
             };
             typeWriter();
 
             // Contact Form Submission
-            const contactForm = document.getElementById('contact-form');
-            if(contactForm) {
-                contactForm.addEventListener('submit', function(e) {
+   const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e){
                     e.preventDefault();
-                    const form = e.target;
-                    const data = new FormData(form);
                     const successMessage = document.getElementById('contact-success');
+                    successMessage.style.display = 'block';
+                    setTimeout(() => { successMessage.style.display = 'none'; }, 4000);
+                    this.reset();
+                });
+            }
 
-                    fetch(form.action, {
-                        method: form.method,
-                        body: data,
-                        headers: { 'Accept': 'application/json' }
-                    }).then(response => {
-                        if (response.ok) {
-                            successMessage.style.display = 'block';
-                            form.reset();
-                            setTimeout(() => { successMessage.style.display = 'none'; }, 5000);
-                        } else {
-                            // Optional: Handle errors
-                            alert("Oops! There was a problem submitting your form.");
-                        }
-                    }).catch(error => {
-                        // Optional: Handle network errors
-                        alert("Oops! There was a problem submitting your form.");
-                    });
+            // Quote Generation Feature
+ const quotes = [
+                { quote: "The future belongs to those who believe in the beauty of their dreams.", author: "Eleanor Roosevelt" },
+                { quote: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
+                { quote: "Believe you can and you're halfway there.", author: "Theodore Roosevelt" },
+                { quote: "The best way to predict the future is to create it.", author: "Peter Drucker" },
+                { quote: "Success is not final, failure is not fatal: it is the courage to continue that counts.", author: "Winston Churchill" },
+                { quote: "The secret of getting ahead is getting started.", author: "Mark Twain" },
+                { quote: "Don't watch the clock; do what it does. Keep going.", author: "Sam Levenson" },
+                { quote: "Innovation distinguishes between a leader and a follower.", author: "Steve Jobs" },
+                { quote: "The road to success and the road to failure are almost exactly the same.", author: "Colin R. Davis" }
+            ];
+
+ const quoteBtn = document.getElementById('generate-quote-btn');
+            const quoteEl = document.getElementById('quote-container');
+            const authorEl = document.getElementById('quote-author');
+
+ if (quoteBtn) {
+                quoteBtn.addEventListener('click', () => {
+                    const randomIndex = Math.floor(Math.random() * quotes.length);
+                    const newQuote = quotes[randomIndex];
+                         quoteEl.textContent = `"${newQuote.quote}"`;
+                    authorEl.textContent = `- ${newQuote.author}`;
                 });
             }
         });
+
+  // 3D Scene Initialization
+        window.onload = function () {
+            // Scene setup
+            const scene = new THREE.Scene();
+            scene.background = new THREE.Color(0x0d8fff);
+
+   // Camera setup
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.z = 5;
+
+  // Renderer setup
+            const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('three-canvas'), antialias: true, alpha: true });
+            renderer.setSize(window.innerWidth, window.innerHeight * 0.8);
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setClearAlpha(0);
+
+    // Lighting
+   const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+            scene.add(ambientLight);
+
+const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+            directionalLight.position.set(5, 5, 5);
+            scene.add(directionalLight);
+
+            // Geometry and Materials
+ const geometries = [
+                new THREE.TorusGeometry(1, 0.4, 16, 100),
+                new THREE.BoxGeometry(1.5, 1.5, 1.5),
+                new THREE.ConeGeometry(1, 2, 32),
+                new THREE.OctahedronGeometry(1.2),
+                new THREE.IcosahedronGeometry(1.3)
+            ];
+
+ const materials = [
+                new THREE.MeshStandardMaterial({ color: 0x0052cc, metalness: 0.8, roughness: 0.1, transparent: true, opacity: 0.9 }),
+                new THREE.MeshStandardMaterial({ color: 0xfde68a, metalness: 0.5, roughness: 0.2, transparent: true, opacity: 0.9 }),
+                new THREE.MeshStandardMaterial({ color: 0x0d8fff, metalness: 0.6, roughness: 0.3, transparent: true, opacity: 0.9 }),
+                new THREE.MeshStandardMaterial({ color: 0x6b7280, metalness: 0.7, roughness: 0.4, transparent: true, opacity: 0.9 }),
+                new THREE.MeshStandardMaterial({ color: 0x22223b, metalness: 0.9, roughness: 0.5, transparent: true, opacity: 0.9 })
+            ];
+            
+   const objects = [];
+            for (let i = 0; i < 20; i++) {
+                const geometry = geometries[Math.floor(Math.random() * geometries.length)];
+                const material = materials[Math.floor(Math.random() * materials.length)];
+                const mesh = new THREE.Mesh(geometry, material);
+                      mesh.position.set(
+                    (Math.random() - 0.5) * 20,
+                    (Math.random() - 0.5) * 20,
+                    (Math.random() - 0.5) * 20
+                );
+                mesh.rotation.set(
+                    Math.random() * Math.PI,
+                    Math.random() * Math.PI,
+                    Math.random() * Math.PI
+                );
+    const scale = Math.random() * 0.5 + 0.5;
+                mesh.scale.set(scale, scale, scale);
+                      scene.add(mesh);
+                objects.push(mesh);
+            }
+            
+    // Raycaster for interaction
+    
+const raycaster = new THREE.Raycaster();
+            const mouse = new THREE.Vector2();
+            let highlightedObject = null;
+            const originalColors = new Map();
+
+            // Store original colors
+ objects.forEach(obj => {
+                originalColors.set(obj.uuid, obj.material.color.getHex());
+            });
+
+            // Handle mouse move for hover effect
+  window.addEventListener('mousemove', (event) => {
+                mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+                mouse.y = -(event.clientY / (window.innerHeight * 0.8)) * 2 + 1; // Corrected for canvas height
+          raycaster.setFromCamera(mouse, camera);
+                const intersects = raycaster.intersectObjects(objects);
+       if (intersects.length > 0) {
+                    const intersectedObject = intersects[0].object;
+                    if (highlightedObject !== intersectedObject) {
+                        if (highlightedObject) {
+                            // Restore original color
+                            highlightedObject.material.color.setHex(originalColors.get(highlightedObject.uuid));
+                        }
+                        // Highlight the new object
+                        highlightedObject = intersectedObject;
+                        highlightedObject.material.color.setHex(0xffffff);
+                        document.body.style.cursor = 'pointer';
+                    }
+                } else {
+                    if (highlightedObject) {
+                        highlightedObject.material.color.setHex(originalColors.get(highlightedObject.uuid));
+                        highlightedObject = null;
+                        document.body.style.cursor = 'default';
+                    }
+                }
+            });
+
+            // Animation loop
+   const animate = function () {
+                requestAnimationFrame(animate);
+
+                // Rotate objects
+  objects.forEach(obj => {
+                    obj.rotation.x += 0.005;
+                    obj.rotation.y += 0.005;
+                });
+     renderer.render(scene, camera);
+            };
+
+            // Handle window resize
+            
+function onWindowResize() {
+                camera.aspect = window.innerWidth / (window.innerHeight * 0.8);
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight * 0.8);
+            }
+            window.addEventListener('resize', onWindowResize, false);
+
+ animate();
+        };
     </script>
 </body>
 </html>
