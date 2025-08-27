@@ -333,7 +333,6 @@
             </div>
             <div class="hero-buttons">
                 <a href="#contact" class="primary">Contact Me</a>
-                <a href="#" class="secondary" download>Download CV</a>
             </div>
             <div style="margin-top:2em;">
                 <span id="typing-effect" style="font-family:monospace; font-size:1.2em;"></span>
@@ -359,11 +358,11 @@
                     </div>
                     <div class="stat-card">
                         <div class="stat-title counter" data-count="2">0</div>
-                        <div class="stat-label">Robotics Teams</div>
+                        <div class="stat-label">Years of Robotics Experiences</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-title counter" data-count="2">0</div>
-                        <div class="stat-label">Science Expos</div>
+                        <div class="stat-label">Years of Science Expo Experiences</div>
                     </div>
                 </div>
                 <h3 class="text-2xl font-bold mb-4" style="font-family:var(--header-font);">Core Skills</h3>
@@ -429,13 +428,23 @@
                 <p>Won gold at the regional Springbots robotics competition, later placing 6th nationally. Led a team in designing and programming innovative robots.</p>
             </div>
             <div class="card" data-aos="zoom-in" data-aos-delay="200">
-                <div class="achievement-title">Bronze Medal: Int'l Science Fair</div>
+                <div class="achievement-title">4th Place Winner:  World Robot Olympiad (WRO)</div>
+                <div class="achievement-year">2025</div>
+                <p>Secured 4th place in the World Robot Olympiad, competing with top students from various schools. Demonstrated creativity, problem solving and resilience under pressure.</p>
+            </div>
+            <div class="card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="achievement-title">Gold Medal: Regional Science Fair</div>
+                <div class="achievement-year">2024</div>
+                <p>Secured a Gold in the 'Engineering' category at regional science fair, competing with top students with different projects in my region. Demonstrated innovation, creativity and                  resilience under pressure.</p>
+            </div>
+             <div class="card" data-aos="zoom-in" data-aos-delay="400">
+                <div class="achievement-title">Bronze Medal: International Science Fair (ISF)</div>
                 <div class="achievement-year">2024</div>
                 <p>Secured a bronze in the 'Engineering' category at ISF, competing with top students globally. Demonstrated creativity and resilience under pressure.</p>
             </div>
-        </div>
+              </div>
         <div class="achievements-grid">
-            <div class="card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="card" data-aos="zoom-in" data-aos-delay="500">
                 <div class="achievement-title">Bronze Medal: World Robot Olympiad</div>
                 <div class="achievement-year">2024</div>
                 <p>Achieved a bronze at WRO, representing the Eastern Cape internationally and collaborating with diverse teams.</p>
@@ -452,11 +461,12 @@
         <div class="section-title">My Trajectory</div>
         <div class="section-subtitle">Key milestones shaping my high school journey.</div>
         <ul class="timeline-list">
+             <li><strong>Aug 2025:</strong> 4th Place Winner at World Robot Olympiad (WRO) — Achieved a certificate.</li>
             <li><strong>Aug 2025:</strong> Repeat Gold at Regional Science Fair — Won a second gold and Best Category award in Physics.</li>
             <li><strong>Jun 2025:</strong> 6th Place at National Springbots — Secured a sixth-place finish nationally.</li>
             <li><strong>May 2025:</strong> Gold at Regional Springbots — Won the gold medal at regional robotics.</li>
-            <li><strong>Dec 2024:</strong> Bronze at World Robot Olympiad (WRO) — Achieved a bronze medal in robotics.</li>
             <li><strong>Oct 2024:</strong> Bronze at International Science Fair (ISF) — Won a bronze medal in engineering.</li>
+            <li><strong>Aug 2024:</strong> Bronze at World Robot Olympiad (WRO) — Achieved a bronze medal in robotics.</li>
             <li><strong>Aug 2024:</strong> Gold at Regional Science Fair — In my first year participating, I secured a gold medal.</li>
             <li><strong>Jan 2024:</strong> Joined Paterson High — Began my high school journey with a focus on academic excellence.</li>
         </ul>
