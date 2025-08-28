@@ -341,15 +341,14 @@
     <div class="section-subtitle">A driven and curious student, passionate about science, technology, and growth.</div>
     <div class="flex flex-col md:flex-row gap-12 items-center">
         <div class="md:w-1/3 text-center">
-            <img src="https://placehold.co/190x190/0052cc/ffffff?text=Clyde" alt="Clyde Snyders" class="avatar mx-auto mb-6" />
-            <img src="https://placehold.co/250x180/fde68a/0052cc?text=In+The+Workshop" alt="Clyde in the workshop" class="mx-auto rounded-lg shadow-md mt-4">
+            <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0008.jpg?raw=true">
         </div>
         <div class="md:w-2/3">
             <p class="mb-4" style="font-size:1.13em;">
-                Hi, my name is Clyde Snyders and I am a grade 9 student at Paterson High School in the vibrant Eastern Cape. My journey into the world of STEM wasn't a single moment but a gradual awakening. It started with a simple fascination for how things work—taking apart old electronics and trying to put them back together. This curiosity was fueled by watching documentaries about space exploration and technological innovation.
+                Hi, my name is Clyde Snyders and I am a grade 9 student at Paterson High School in the vibrant Eastern Cape. My journey into the world of STEM wasn't a single moment but a gradual awakening. It started with a simple fascination for how things work—taking apart old electronics and trying to put them back together.
             </p>
             <p class="mb-4" style="font-size:1.13em;">
-                My true inspiration, however, came from my science teacher, who saw my potential and encouraged me to join the robotics club. Their mentorship showed me that my passion could be transformed into tangible creations. I'm driven by the desire to solve real-world problems. Whether it’s building robots, exploring physics, or collaborating on team projects, I believe every challenge is an opportunity to learn, innovate, and contribute to a better future.
+                My true inspiration, however, came from my mom, who saw my potential and encouraged from the start up until where I am now . This showed me that my passion could be transformed into tangible creations. I'm driven by the desire to solve real-world problems. Whether it’s building robots, exploring physics, performing well in academics, or collaborating on team projects, I believe every challenge is an opportunity to learn, innovate, and contribute to a better future.
             </p>
             <div class="stats-row">
                 <div class="stat-card">
