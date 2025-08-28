@@ -9,11 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three-orbitcontrols-ts@0.1.2/lib/index.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/FontLoader.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/geometries/TextGeometry.js"></script>
-
+    
   <style>
         :root {
             --primary: #0052cc;
@@ -328,6 +326,7 @@
             <div class="hero-subtitle">
                 Grade 9 Student | Paterson High School | Eastern Cape
             </div>
+            <img src="https://placehold.co/600x300/ffffff/0052cc?text=My+Robotics+Project" alt="Robotics Project" class="mx-auto rounded-lg shadow-lg my-4" style="max-width: 80%;">
             <div class="hero-buttons">
                 <a href="#contact" class="primary">Contact Me</a>
             </div>
@@ -336,57 +335,62 @@
             </div>
         </div>
     </section>
+
 <section id="about" class="section" data-aos="fade-up">
-        <div class="section-title">About Me</div>
-        <div class="section-subtitle">A driven and curious student, passionate about science, technology, and growth.</div>
-        <div class="flex flex-col md:flex-row gap-12 items-center">
-            <div class="md:w-1/3 text-center">
-                <img src="https://placehold.co/190x190/0052cc/ffffff?text=Clyde" alt="Clyde Snyders" class="avatar mx-auto mb-6" />
-            </div>
-            <div class="md:w-2/3">
-                <p class="mb-6" style="font-size:1.13em;">
-                    Hi, my name is Clyde Snyders and I am a grade 9 student at Paterson High School in the vibrant Eastern Cape. My journey is rooted in a love for learning, a curiosity for how things work, and a drive to make a difference. Whether it’s building robots, exploring physics, or collaborating on team projects, I believe every challenge is an opportunity for growth.
-                </p>
-                <div class="stats-row">
-                    <div class="stat-card">
-                        <div class="stat-title counter" data-count="81.1">0</div>
-                        <div class="stat-label">Avg. Mark</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-title counter" data-count="2">0</div>
-                        <div class="stat-label">Years of Robotics Experiences</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-title counter" data-count="2">0</div>
-                        <div class="stat-label">Years of Science Expo Experiences</div>
-                    </div>
+    <div class="section-title">About Me</div>
+    <div class="section-subtitle">A driven and curious student, passionate about science, technology, and growth.</div>
+    <div class="flex flex-col md:flex-row gap-12 items-center">
+        <div class="md:w-1/3 text-center">
+            <img src="https://placehold.co/190x190/0052cc/ffffff?text=Clyde" alt="Clyde Snyders" class="avatar mx-auto mb-6" />
+            <img src="https://placehold.co/250x180/fde68a/0052cc?text=In+The+Workshop" alt="Clyde in the workshop" class="mx-auto rounded-lg shadow-md mt-4">
+        </div>
+        <div class="md:w-2/3">
+            <p class="mb-4" style="font-size:1.13em;">
+                Hi, my name is Clyde Snyders and I am a grade 9 student at Paterson High School in the vibrant Eastern Cape. My journey into the world of STEM wasn't a single moment but a gradual awakening. It started with a simple fascination for how things work—taking apart old electronics and trying to put them back together. This curiosity was fueled by watching documentaries about space exploration and technological innovation.
+            </p>
+            <p class="mb-4" style="font-size:1.13em;">
+                My true inspiration, however, came from my science teacher, who saw my potential and encouraged me to join the robotics club. Their mentorship showed me that my passion could be transformed into tangible creations. I'm driven by the desire to solve real-world problems. Whether it’s building robots, exploring physics, or collaborating on team projects, I believe every challenge is an opportunity to learn, innovate, and contribute to a better future.
+            </p>
+            <div class="stats-row">
+                <div class="stat-card">
+                    <div class="stat-title counter" data-count="81.1">0</div>
+                    <div class="stat-label">Avg. Mark</div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4" style="font-family:var(--header-font);">Core Skills</h3>
-                <div class="skills-grid">
-                    <div>
-                        <div class="flex justify-between items-center mb-1"><span>Mathematics</span><span>92%</span></div>
-                        <div class="skill-bar-bg"><div class="skill-bar" style="width:92%"></div></div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between items-center mb-1"><span>Natural Science</span><span>81.5%</span></div>
-                        <div class="skill-bar-bg"><div class="skill-bar" style="width:81.5%"></div></div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between items-center mb-1"><span>Robotics</span><span>88%</span></div>
-                        <div class="skill-bar-bg"><div class="skill-bar" style="width:88%"></div></div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between items-center mb-1"><span>Engineering Design</span><span>85%</span></div>
-                        <div class="skill-bar-bg"><div class="skill-bar" style="width:85%"></div></div>
-                    </div>
+                <div class="stat-card">
+                    <div class="stat-title counter" data-count="2">0</div>
+                    <div class="stat-label">Years of Robotics</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-title counter" data-count="2">0</div>
+                    <div class="stat-label">Years of Science Expo</div>
+                </div>
+            </div>
+            <h3 class="text-2xl font-bold mb-4" style="font-family:var(--header-font);">Core Skills</h3>
+            <div class="skills-grid">
+                <div>
+                    <div class="flex justify-between items-center mb-1"><span>Mathematics</span><span>92%</span></div>
+                    <div class="skill-bar-bg"><div class="skill-bar" style="width:92%"></div></div>
+                </div>
+                <div>
+                    <div class="flex justify-between items-center mb-1"><span>Natural Science</span><span>81.5%</span></div>
+                    <div class="skill-bar-bg"><div class="skill-bar" style="width:81.5%"></div></div>
+                </div>
+                <div>
+                    <div class="flex justify-between items-center mb-1"><span>Robotics</span><span>88%</span></div>
+                    <div class="skill-bar-bg"><div class="skill-bar" style="width:88%"></div></div>
+                </div>
+                <div>
+                    <div class="flex justify-between items-center mb-1"><span>Engineering Design</span><span>85%</span></div>
+                    <div class="skill-bar-bg"><div class="skill-bar" style="width:85%"></div></div>
                 </div>
             </div>
         </div>
-    </section>
-
- <section id="academics" class="section" data-aos="fade-up">
+    </div>
+</section>
+<section id="academics" class="section" data-aos="fade-up">
         <div class="section-title">Academic Performance</div>
         <div class="section-subtitle">My Grade 9 results reflect a commitment to excellence across diverse subjects.</div>
+        <img src="https://placehold.co/700x200/0052cc/ffffff?text=Academic+Excellence" alt="Academic Achievements" class="mx-auto rounded-lg shadow-md mb-8">
         <div class="card overflow-x-auto max-w-2xl mx-auto">
             <table class="w-full text-left">
                 <thead>
@@ -412,6 +416,7 @@
  <section id="achievements" class="section" data-aos="fade-up">
         <div class="section-title">Key Achievements</div>
         <div class="section-subtitle">Milestones from national and international competitions.</div>
+        <img src="https://placehold.co/700x200/fde68a/0052cc?text=Awards+and+Medals" alt="Awards and Medals" class="mx-auto rounded-lg shadow-md mb-8">
         <div class="achievements-grid">
             <div class="card" data-aos="zoom-in">
                 <div class="achievement-title">Gold Medal: Regional Science Expo</div>
@@ -526,7 +531,7 @@
             AOS.init({ once: true, duration: 900 });
 
             // Animated Counters
-  const animateCounters = () => {
+   const animateCounters = () => {
                 const counters = document.querySelectorAll('.counter');
                 const observer = new IntersectionObserver(entries => {
                     entries.forEach(entry => {
@@ -555,7 +560,8 @@
             animateCounters();
 
             // Hero Typing Effect
- const typeWriter = () => {
+            
+const typeWriter = () => {
                 const el = document.getElementById('typing-effect');
                 const phrases = [
                     "Curious. Ambitious. Always improving.",
@@ -587,10 +593,11 @@
             typeWriter();
 
             // Contact Form Submission
-   const contactForm = document.getElementById('contact-form');
+ const contactForm = document.querySelector('.contact-form');
             if (contactForm) {
                 contactForm.addEventListener('submit', function(e){
                     e.preventDefault();
+                    // This is for demonstration. For a real form, you'd handle the submission via fetch or another method.
                     const successMessage = document.getElementById('contact-success');
                     successMessage.style.display = 'block';
                     setTimeout(() => { successMessage.style.display = 'none'; }, 4000);
@@ -599,7 +606,7 @@
             }
 
             // Quote Generation Feature
- const quotes = [
+   const quotes = [
                 { quote: "The future belongs to those who believe in the beauty of their dreams.", author: "Eleanor Roosevelt" },
                 { quote: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
                 { quote: "Believe you can and you're halfway there.", author: "Theodore Roosevelt" },
@@ -611,84 +618,126 @@
                 { quote: "The road to success and the road to failure are almost exactly the same.", author: "Colin R. Davis" }
             ];
 
- const quoteBtn = document.getElementById('generate-quote-btn');
+  const quoteBtn = document.getElementById('generate-quote-btn');
             const quoteEl = document.getElementById('quote-container');
             const authorEl = document.getElementById('quote-author');
 
- if (quoteBtn) {
+   if (quoteBtn) {
                 quoteBtn.addEventListener('click', () => {
                     const randomIndex = Math.floor(Math.random() * quotes.length);
                     const newQuote = quotes[randomIndex];
-                         quoteEl.textContent = `"${newQuote.quote}"`;
+                    quoteEl.textContent = `"${newQuote.quote}"`;
                     authorEl.textContent = `- ${newQuote.author}`;
                 });
             }
         });
 
-  // 3D Scene Initialization
-        window.onload = function () {
-            // Scene setup
-            const scene = new THREE.Scene();
-            scene.background = new THREE.Color(0x0d8fff);
+// ================================================================================= //
+// START OF MODIFIED 3D SCENE (CONNECTING STARS)                                     //
+// ================================================================================= //
+window.onload = function () {
+    // Scene setup
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x0d8fff);
 
-   // Camera setup
-            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-            camera.position.z = 5;
+    // Camera setup
+  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = 50;
 
-  // Renderer setup
-            const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('three-canvas'), antialias: true, alpha: true });
-            renderer.setSize(window.innerWidth, window.innerHeight * 0.8);
-            renderer.setPixelRatio(window.devicePixelRatio);
-            renderer.setClearAlpha(0);
+    // Renderer setup
+const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('three-canvas'), antialias: true, alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight * 0.8);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setClearAlpha(0);
 
     // Lighting
-   const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-            scene.add(ambientLight);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    scene.add(ambientLight);
 
-const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
-            directionalLight.position.set(5, 5, 5);
-            scene.add(directionalLight);
+ const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+    directionalLight.position.set(5, 5, 5);
+    scene.add(directionalLight);
 
-            // 3D Text Geometry for "PORTFOLIO"
- const fontLoader = new THREE.FontLoader();
-            fontLoader.load('https://cdn.jsdelivr.net/npm/three@0.128.0/examples/fonts/helvetiker_bold.typeface.json', function (font) {
-                const textGeometry = new THREE.TextGeometry('PORTFOLIO', {
-                    font: font,
-                    size: 1,
-                    height: 0.2,
-                    curveSegments: 12,
-                    bevelEnabled: true,
-                    bevelThickness: 0.03,
-                    bevelSize: 0.02,
-                    bevelOffset: 0,
-                    bevelSegments: 5
-                });
-                textGeometry.center();
-                const textMaterial = new THREE.MeshStandardMaterial({
-                    color: 0xfde68a,
-                    metalness: 0.8,
-                    roughness: 0.1
-                });
-                const textMesh = new THREE.Mesh(textGeometry, textMaterial);
-                scene.add(textMesh);
+    // Connecting Stars/Particles
+  const particlesGeometry = new THREE.BufferGeometry();
+    const particlesCount = 500;
+    const posArray = new Float32Array(particlesCount * 3);
 
-                // Animation loop
-   const animate = function () {
-                    requestAnimationFrame(animate);
-                    textMesh.rotation.y += 0.005;
-                    renderer.render(scene, camera);
-                };
-                animate();
-            });
+  for (let i = 0; i < particlesCount * 3; i++) {
+        posArray[i] = (Math.random() - 0.5) * 100;
+    }
 
-            // Handle window resize
-   function onWindowResize() {
-                camera.aspect = window.innerWidth / (window.innerHeight * 0.8);
-                camera.updateProjectionMatrix();
-                renderer.setSize(window.innerWidth, window.innerHeight * 0.8);
+  particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+
+ const particlesMaterial = new THREE.PointsMaterial({
+        size: 0.15,
+        color: 0xfde68a,
+    });
+
+  const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+    scene.add(particlesMesh);
+
+const linesGeometry = new THREE.BufferGeometry();
+    const maxConnections = 200; // Limit connections for performance
+    const positions = new Float32Array(maxConnections * 6);
+    linesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    const linesMaterial = new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.2 });
+    const lines = new THREE.LineSegments(linesGeometry, linesMaterial);
+    scene.add(lines);
+
+const connectionDistance = 8; // How close particles need to be to connect
+
+    // Animation loop
+const clock = new THREE.Clock();
+    const animate = function () {
+        const elapsedTime = clock.getElapsedTime();
+        particlesMesh.rotation.y = elapsedTime * 0.1;
+        particlesMesh.rotation.x = elapsedTime * 0.05;
+
+        // Update connecting lines
+const vertices = particlesGeometry.attributes.position.array;
+        let linePositions = linesGeometry.attributes.position.array;
+        let lineIndex = 0;
+
+ for (let i = 0; i < particlesCount; i++) {
+            for (let j = i + 1; j < particlesCount; j++) {
+                if (lineIndex >= maxConnections * 2) break; // Don't exceed buffer size
+
+ const p1 = new THREE.Vector3(vertices[i * 3], vertices[i * 3 + 1], vertices[i * 3 + 2]);
+                const p2 = new THREE.Vector3(vertices[j * 3], vertices[j * 3 + 1], vertices[j * 3 + 2]);
+                const dist = p1.distanceTo(p2);
+
+ if (dist < connectionDistance) {
+                    linePositions[lineIndex * 3] = p1.x;
+                    linePositions[lineIndex * 3 + 1] = p1.y;
+                    linePositions[lineIndex * 3 + 2] = p1.z;
+                    lineIndex++;
+                    linePositions[lineIndex * 3] = p2.x;
+                    linePositions[lineIndex * 3 + 1] = p2.y;
+                    linePositions[lineIndex * 3 + 2] = p2.z;
+                    lineIndex++;
+                }
             }
-            window.addEventListener('resize', onWindowResize, false);
-        };
+        }
+        linesGeometry.setDrawRange(0, lineIndex); // Only draw connected lines
+        linesGeometry.attributes.position.needsUpdate = true;
+        
+ requestAnimationFrame(animate);
+        renderer.render(scene, camera);
+    };
+    animate();
+
+    // Handle window resize
+function onWindowResize() {
+        camera.aspect = window.innerWidth / (window.innerHeight * 0.8);
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight * 0.8);
+    }
+    window.addEventListener('resize', onWindowResize, false);
+};
+// ================================================================================= //
+// END OF MODIFIED 3D SCENE                                                          //
+// ================================================================================= //
     </script>
 </body>
 </html>
