@@ -328,7 +328,7 @@
             </div>
             <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0021.jpg?raw=true"
   alt="C.Snyders" 
-  class="mx-auto rounded-lg shadow-md mt-4 w-50 h-60">
+  class="mx-auto rounded-lg shadow-md mt-4 w-50 h-64">
             <div class="hero-buttons">
                 <a href="#contact" class="primary">Contact Me</a>
             </div>
