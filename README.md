@@ -326,7 +326,7 @@
             <div class="hero-subtitle">
                 Grade 9 Student | Paterson High School | Eastern Cape
             </div>
-            <img src="https://placehold.co/600x300/ffffff/0052cc?text=My+Robotics+Project" alt="Robotics Project" class="mx-auto rounded-lg shadow-lg my-4" style="max-width: 80%;">
+            <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0021.jpg?raw=true">
             <div class="hero-buttons">
                 <a href="#contact" class="primary">Contact Me</a>
             </div>
