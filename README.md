@@ -341,7 +341,9 @@
     <div class="section-subtitle">A driven and curious student, passionate about science, technology, and growth.</div>
     <div class="flex flex-col md:flex-row gap-12 items-center">
         <div class="md:w-1/3 text-center">
-            <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0008.jpg?raw=true">
+            <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0008.jpg?raw=true" 
+  alt="C.Snyders"
+  class="mx-auto w-48 h-48 rounded-full object-cover shadow-lg">
         </div>
         <div class="md:w-2/3">
             <p class="mb-4" style="font-size:1.13em;">
