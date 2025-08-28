@@ -328,7 +328,7 @@
             </div>
             <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0021.jpg?raw=true"
   alt="C.Snyders" 
-  class="mx-auto rounded-lg shadow-md mt-4 w-50 h-100">
+  class="mx-auto rounded-lg shadow-md mt-4 w-50 h-82">
             <div class="hero-buttons">
                 <a href="#contact" class="primary">Contact Me</a>
             </div>
@@ -441,6 +441,9 @@
                 <div class="achievement-year">2024</div>
                 <p>Secured a Gold in the 'Engineering' category at regional science fair, competing with top students with different projects in my region. Demonstrated innovation, creativity and                  resilience under pressure.</p>
             </div>
+            <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0021.jpg?raw=true"
+  alt="C.Snyders" 
+  class="mx-auto rounded-lg shadow-md mt-4 w-50 h-82">
              <div class="card" data-aos="zoom-in" data-aos-delay="400">
                 <div class="achievement-title">Bronze Medal: International Science Fair (ISF)</div>
                 <div class="achievement-year">2024</div>
