@@ -667,11 +667,18 @@
         <div class="section-title">Get In Touch</div>
         <div class="section-subtitle">I'm always open to new challenges and opportunities. Let's connect!</div>
         <div class="max-w-xl mx-auto card">
-            <form action="https://formspree.io/f/xgvlvvnn" method="POST" class="contact-form"> 
-              <input type="email" name="email" placeholder="you@example.com" required class="w-full p-3 mb-4 bg-gray-100 rounded-lg border focus:outline-none focus:border-blue-500"> 
-              <textarea name="message" rows="4" placeholder="Let's build something amazing together!" required class="w-full p-3 mb-4 bg-gray-100 rounded-lg border focus:outline-none focus:border-blue-500"></textarea> 
-              <button type="submit" class="w-full bg-secondary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary transition-colors">Send Message</button> 
-            </form>
+           <form 
+    action="https://formspree.io/f/xgvlvvnn" method="POST" class="contact-form"> 
+  <label class="block mb-4"> 
+    <span class="text-gray-700">Your Email:</span> 
+    <input type="email" name="email" class="mt-1 block w-full" placeholder="you@example.com" required> 
+  </label> 
+  <label class="block mb-4"> 
+    <span class="text-gray-700">Your Message:</span> 
+    <textarea name="message" rows="4" class="mt-1 block w-full" placeholder="Let's build something amazing together!" required></textarea> 
+  </label> 
+  <button type="submit" class="w-full">Send Message</button> 
+</form>
         </div>
     </section>
      <!-- FOOTER -->
