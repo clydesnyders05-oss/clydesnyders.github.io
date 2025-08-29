@@ -719,9 +719,9 @@
             const blogPosts = [
                 {
                     id: 1,
-                    title: "Lessons from the World Robot Olympiad",
-                    meta: "August 28, 2025 | Robotics",
-                    image: "https://placehold.co/600x400/0d8fff/ffffff?text=Robotics+Insights",
+                    title: "Sharing the story of a Young Lad",
+                    meta: "June 20, 2025 | Sharing My Journey",
+                    image: "https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0027.jpg?raw=true",
                     excerpt: "Competing on a global stage was an incredible experience. Here are my key takeaways on teamwork, resilience, and creative problem-solving...",
                     fullContent: `<p>The World Robot Olympiad was more than just a competition; it was a marathon of innovation, pressure, and collaboration. Our team spent months designing, building, and programming our robot. The biggest lesson I learned was the importance of adaptability. When our main sensor failed just hours before the final round, we had to quickly redesign a part of our code and recalibrate everything. It was stressful, but we pulled together and managed to secure 4th place.</p><p>Another key takeaway was the power of international collaboration. Seeing how teams from Japan, Germany, and the USA approached the same problem with completely different strategies was eye-opening. It taught me that there's never just one right answer in engineering.</p>`
                 },
