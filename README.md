@@ -737,7 +737,7 @@
                     id: 3,
                     title: "Inspiring Talks",
                     meta: "August 19, 2025 | Motivating",
-                    image: "https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250830-WA0015.jpg?raw=true",
+                    image: "https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250830-WA0024.jpg?raw=true",
                     excerpt: "I had the privilege of speaking at the Rotary Club for Algoa Bay Lunch, where I shared my insights and experiences with the members. The event was a great opportunity to connect with people and sharing my story....",
                     fullContent: `<p>As a token of appreciation for my visit, the Rotary Club gifted me with a travel bag and other goodies in preparation for my upcoming trip to Panama. Their thoughtfulness and generosity are truly appreciated!.</p>`
                 },
