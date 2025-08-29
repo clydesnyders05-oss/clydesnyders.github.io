@@ -729,7 +729,7 @@
                     id: 2,
                     title: "Science in Action",
                     meta: "August 22, 2025 | Science Week",
-                    image: "https://placehold.co/600x400/0052cc/ffffff?text=Science+Expo+Journey",
+                    image: "https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0022.jpg?raw=true",
                     excerpt: "NATIONAL SCIENCE WEEK at NMU as a future scientist and engineer. I got to engaged with different science stations and interacted with peers from other schools....",
                     fullContent: `<p>🌟Hands-on activities in robotics, environmental science, and more sparked my curiosity and enthusiasm for science and engineering, inspiring me to continue exploring and contributing to scientific advancements. The experience not only deepened my understanding of scientific concepts but also fueled my passion for innovation and discovery. I'm excited to see where my interest in science and engineering takes me!.</p><p> The importance thing is not to stop questioning. Curiosity has its own reason for existance ~ Albert Einstein..</p>`
                 },
