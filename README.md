@@ -742,20 +742,20 @@
                     fullContent: `<p>As a token of appreciation for my visit, the Rotary Club gifted me with a travel bag and other goodies in preparation for my upcoming trip to Panama. Their thoughtfulness and generosity are truly appreciated!.</p>`
                 },
                 {
-                    id: 4,
-                    title: "The Importance of Prototyping",
-                    meta: "July 10, 2025 | Engineering",
-                    image: "https://placehold.co/600x400/fde68a/22223b?text=Prototyping",
-                    excerpt: "Fail fast, learn faster. Why building physical prototypes is the most important step in the design process...",
-                    fullContent: `<p>In both robotics and my science fair projects, I've learned that you can't perfect a design on paper. Building a physical prototype, no matter how rough, is essential. It reveals flaws in your thinking that you'd never see otherwise. My first robot for the Springbots competition could barely move in a straight line! But that failure taught me more than any textbook could. Each iteration, each broken part, is a lesson that leads to a better final product.</p>`
+                    id: 5,
+                    title: "The Importance of Sharing your Mark",
+                    meta: "June 20, 2025 | Radio Interview",
+                    image: "https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0027.jpg?raw=true",
+                    excerpt: "I had the opportunity to share insights on my journey and how it is to be a STEM learner. I discussed the importance of creating solutions for everyday problems , providing guidance on robotics and science, and fostering a growth mindset. I also shared my journey from being a curious grade 8 learner to a grade 9 Patersonain....",
+                    fullContent: `<p>In both robotics and my science fair projects, I've learned that you can't perfect a design on paper. It reveals flaws in your thinking that you'd never see otherwise. Each iteration, each broken part, is a lesson that leads to a better final product, That was my story.</p>`
                 },
                 {
-                    id: 5,
-                    title: "Balancing Academics and Competitions",
-                    meta: "June 25, 2025 | Student Life",
+                    id: 4,
+                    title: "Science Olympiad",
+                    meta: "August 4, 2025 | Locked In: My Science Olympiad Experience 🔬",
                     image: "https://placehold.co/600x400/0052cc/ffffff?text=Time+Management",
-                    excerpt: "Juggling homework, exams, and international competitions isn't easy. Here are some strategies that have worked for me...",
-                    fullContent: `<p>People often ask me how I manage my schoolwork while preparing for major competitions. The key is rigorous time management and prioritizing tasks. I use a digital calendar to block out my time for studying, building, programming, and relaxing. It's crucial to be disciplined but also to know when to take a break to avoid burnout. It's a balancing act, but the skills I'm learning in time management are just as valuable as the technical skills.</p>`
+                    excerpt: "I sat down to write the Natural Science Olympiad test for a full hour, I felt a rush of focus. The questions were challenging, but I was determined to do my best.....",
+                    fullContent: `<p> Time was a factor but I worked through the test, my mind fully engaged with the scientific concepts and problems. I was "locked in" – fully focused and concentrated on the task at hand.</p>`
                 },
                 {
                     id: 6,
