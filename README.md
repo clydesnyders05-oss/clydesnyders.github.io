@@ -719,27 +719,27 @@
             const blogPosts = [
                 {
                     id: 1,
-                    title: "Sharing the story of a Young Lad",
-                    meta: "June 20, 2025 | Sharing My Journey",
-                    image: "https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0027.jpg?raw=true",
-                    excerpt: "Competing on a global stage was an incredible experience. Here are my key takeaways on teamwork, resilience, and creative problem-solving...",
-                    fullContent: `<p>The World Robot Olympiad was more than just a competition; it was a marathon of innovation, pressure, and collaboration. Our team spent months designing, building, and programming our robot. The biggest lesson I learned was the importance of adaptability. When our main sensor failed just hours before the final round, we had to quickly redesign a part of our code and recalibrate everything. It was stressful, but we pulled together and managed to secure 4th place.</p><p>Another key takeaway was the power of international collaboration. Seeing how teams from Japan, Germany, and the USA approached the same problem with completely different strategies was eye-opening. It taught me that there's never just one right answer in engineering.</p>`
+                    title: "Robotics is a Sport",
+                    meta: "August 23, 2025 | WRO",
+                    image: "https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250830-WA0023.jpg?raw=true",
+                    excerpt: "A team of 3 learners, Me(Clyde Snyders), CAYZEN HAUPT, and ASAVELA VUMISA, represented Paterson High at the annual World Robotics Olympiad in Makhanda! 🤖🇿🇦,Robotics is no longer just a field of engineering; it is the language through which we will converse with the future....",
+                    fullContent: `<p>The World Robot Olympiad was more than just a competition; it was a marathon of innovation, pressure, and collaboration. Our team spent months designing, building, and programming our robot. The biggest lesson I learned was the importance of adaptability. When our main robots wheel failed just hours before the final round, we had to quickly redesign and change our code and recalibrate everything. It was stressful, but we pulled together and managed to secure 4th place.</p><p>Another key takeaway was the power of collaboration. Seeing how teams from various schools compete and approached the same problem with completely different strategies was eye-opening. It taught me that there's never just one right answer in engineering.</p>`
                 },
                 {
                     id: 2,
-                    title: "From Hypothesis to Gold Medal: My Science Expo Journey",
-                    meta: "August 15, 2025 | Science Expo",
+                    title: "Science in Action",
+                    meta: "August 22, 2025 | Science Week",
                     image: "https://placehold.co/600x400/0052cc/ffffff?text=Science+Expo+Journey",
-                    excerpt: "My journey through the Regional Science Expo, from the initial idea for my physics project to presenting it to the judges...",
-                    fullContent: `<p>The Regional Science Expo project started with a simple question: can we use magnetic levitation for a more efficient small-scale transport system? This led me down a rabbit hole of physics principles, from electromagnetism to superconductors. The most challenging part was building a stable track. After dozens of failed attempts, I finally created a design that worked consistently.</p><p>Presenting to the judges was nerve-wracking, but I was passionate about my project. Explaining the complex physics in a simple way was a great learning experience. Winning the gold medal and 'Best in Category' was just the cherry on top of an amazing journey of discovery.</p>`
+                    excerpt: "NATIONAL SCIENCE WEEK at NMU as a future scientists and engineers. I got to engaged with different science stations and interacted with peers from other schools....",
+                    fullContent: `<p>🌟Hands-on activities in robotics, environmental science, and more sparked my curiosity and enthusiasm for science and engineering, inspiring me to continue exploring and contributing to scientific advancements. The experience not only deepened my understanding of scientific concepts but also fueled my passion for innovation and discovery. I'm excited to see where my interest in science and engineering takes me!.</p><p> The importance thing is not to stop questioning. Curiosity has its own reason for existance ~ Albert Einstein..</p>`
                 },
                 {
                     id: 3,
-                    title: "Why I'm Excited About AI in STEM",
-                    meta: "July 30, 2025 | Technology",
+                    title: "Inspiring Talks",
+                    meta: "August 19, 2025 | Motivating",
                     image: "https://placehold.co/600x400/22223b/fde68a?text=Future+of+Tech",
-                    excerpt: "Exploring the potential of artificial intelligence to revolutionize scientific research and engineering. A look at what the future holds...",
-                    fullContent: `<p>Artificial Intelligence is no longer science fiction; it's a tool that's actively reshaping the world of STEM. From accelerating drug discovery by predicting protein folding to optimizing complex engineering designs, AI is a force multiplier. I've started learning Python and basic machine learning models, and the potential is staggering. I believe that understanding AI will be as fundamental as understanding physics for the next generation of scientists and engineers.</p>`
+                    excerpt: "I had the privilege of speaking at the Rotary Club for Algoa Bay Lunch, where I shared my insights and experiences with the members. The event was a great opportunity to connect with people and sharing my story....",
+                    fullContent: `<p>As a token of appreciation for my visit, the Rotary Club gifted me with a travel bag and other goodies in preparation for my upcoming trip to Panama. Their thoughtfulness and generosity are truly appreciated!.</p>`
                 },
                 {
                     id: 4,
