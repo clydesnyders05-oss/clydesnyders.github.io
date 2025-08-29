@@ -742,7 +742,7 @@
                     fullContent: `<p>As a token of appreciation for my visit, the Rotary Club gifted me with a travel bag and other goodies in preparation for my upcoming trip to Panama. Their thoughtfulness and generosity are truly appreciated!.</p>`
                 },
                 {
-                    id: 5,
+                    id: 4,
                     title: "The Importance of Sharing your Mark",
                     meta: "June 20, 2025 | Radio Interview",
                     image: "https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0027.jpg?raw=true",
@@ -750,20 +750,20 @@
                     fullContent: `<p>In both robotics and my science fair projects, I've learned that you can't perfect a design on paper. It reveals flaws in your thinking that you'd never see otherwise. Each iteration, each broken part, is a lesson that leads to a better final product, That was my story.</p>`
                 },
                 {
-                    id: 4,
+                    id: 5,
                     title: "Science Olympiad",
                     meta: "August 4, 2025 | Locked In: My Science Olympiad Experience 🔬",
-                    image: "https://placehold.co/600x400/0052cc/ffffff?text=Time+Management",
+                    image: "https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250804-WA0030.jpg?raw=true",
                     excerpt: "I sat down to write the Natural Science Olympiad test for a full hour, I felt a rush of focus. The questions were challenging, but I was determined to do my best.....",
                     fullContent: `<p> Time was a factor but I worked through the test, my mind fully engaged with the scientific concepts and problems. I was "locked in" – fully focused and concentrated on the task at hand.</p>`
                 },
                 {
                     id: 6,
-                    title: "My Favourite Programming Language: Python",
-                    meta: "June 5, 2025 | Coding",
+                    title: "My Favourite Language to Introduce Coding: The Basics",
+                    meta: "March 17, 2025 | Teaching the Basics",
                     image: "https://placehold.co/600x400/0d8fff/ffffff?text=Python+Code",
-                    excerpt: "Why Python is my go-to language for robotics, data analysis, and exploring new ideas...",
-                    fullContent: `<p>I've experimented with a few programming languages, but I always come back to Python. Its clean syntax makes it easy to learn and read, but beneath that simplicity is a powerful ecosystem of libraries. For robotics, libraries like OpenCV for computer vision are invaluable. For my science projects, NumPy and Matplotlib are essential for data analysis and visualization. It's the perfect language for a student who wants to quickly turn ideas into reality.</p>`
+                    excerpt: "My school welcomed a fresh batch of Grade 8 students interested in coding....",
+                    fullContent: `<p>The program aimed to make our new Grade 8s feel welcome and comfortable in their new environment. We introduced them to the robotics club, helping them navigate their new surroundings in coding..</p>`
                 },
                 {
                     id: 7,
