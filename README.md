@@ -760,16 +760,16 @@
                 },
                 {
                     id: 6,
-                    title: "My Favourite Language to Introduce Coding: The Basics",
-                    meta: "March 17, 2025 | Teaching the Basics",
-                    image: "https://placehold.co/600x400/0d8fff/ffffff?text=Python+Code",
-                    excerpt: "My school welcomed a fresh batch of Grade 8 students interested in coding....",
-                    fullContent: `<p>The program aimed to make our new Grade 8s feel welcome and comfortable in their new environment. We introduced them to the robotics club, helping them navigate their new surroundings in coding..</p>`
+                    title: "Team Cyber Shadow X",
+                    meta: "June 16, 2025 | SpringBots National Competition",
+                    image: "https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250830-WA0034.jpg?raw=true",
+                    excerpt: "Team Cyber Shadow X Shines on June 16th! 🌟 On June 16th, the Springbots National Competition took place, bringing together talented teams from across the South Africa to showcase their skills and innovative spirit. Among the participating teams was Team Cyber Shadow X (I was part of the team).....",
+                    fullContent: `<p>The Springbots National Competition is an annual event that challenges students to design, build, and program robots to solve complex problems. Team Cyber Shadow X 🤖 comprising students from various schools and backgrounds, demonstrated exceptional skill and dedication throughout the competition and managed to end up sixthth place..</p>`
                 },
                 {
                     id: 7,
-                    title: "The Physics of Everyday Objects",
-                    meta: "May 20, 2025 | Science",
+                    title: "Spotlight on ME",
+                    meta: "May 20, 2025 | Spotlight flames",
                     image: "https://placehold.co/600x400/22223b/fde68a?text=Physics",
                     excerpt: "How a deeper understanding of physics can change the way you see the world around you...",
                     fullContent: `<p>Studying physics has been like getting a new pair of eyes. Suddenly, a simple act like throwing a ball becomes a beautiful interplay of gravity, momentum, and air resistance. A microwave oven is a fascinating application of electromagnetic waves. This perspective makes the world a much more interesting place and constantly sparks new ideas for projects and experiments.</p>`
