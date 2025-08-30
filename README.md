@@ -760,39 +760,43 @@
                 },
                 {
                     id: 6,
+                    title: "i am Just a Boytjie from Couldridge Road",
+                    meta: "June 19, 2025 | Spotlight on ME",
+                    image: "https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0024.jpg?raw=true",
+                    excerpt: "I'm still pinching myself, but I'm thrilled to share that I've been killing it in multiple areas ! 🎖️🎖️🎖️....",
+                    fullContent: `<p> As a Grade 9 learner, I'm proud to say I'm in the TOP 5 in my grade, and Maths is definitely one of my strong suits. But what really got me excited was coding and robotics - I'm loving every minute of it! 🤖💻 The highlight of my journey so far has been winning a bronze medal at the INTERNATIONAL SCIENCE EXPO - it's an incredible feeling knowing all my hard work paid off! 🏆 I'm grateful for the support of my family, friends, and mentors who've encouraged me every step of the way. I'm excited to see what the future holds, and I'll keep pushing myself to achieve more.  - WATCH THIS SPACE 🤩, 
+click the link to see the post https://www.facebook.com/100063838813751/posts/1266088535529095/?mibextid=rS40aB7S9Ucbxw6v.....",</p>`
+
+                  },
+                  {
+                        
+                    id: 7,
                     title: "Team Cyber Shadow X",
                     meta: "June 16, 2025 | SpringBots National Competition",
                     image: "https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250830-WA0034.jpg?raw=true",
                     excerpt: "Team Cyber Shadow X Shines on June 16th! 🌟 On June 16th, the Springbots National Competition took place, bringing together talented teams from across the South Africa to showcase their skills and innovative spirit. Among the participating teams was Team Cyber Shadow X (I was part of the team).....",
                     fullContent: `<p>The Springbots National Competition is an annual event that challenges students to design, build, and program robots to solve complex problems. Team Cyber Shadow X 🤖 comprising students from various schools and backgrounds, demonstrated exceptional skill and dedication throughout the competition and managed to end up sixthth place..</p>`
-                },
-                {
-                    id: 7,
-                    title: "Spotlight on ME",
-                    meta: "May 20, 2025 | Spotlight flames",
-                    image: "https://placehold.co/600x400/22223b/fde68a?text=Physics",
-                    excerpt: "How a deeper understanding of physics can change the way you see the world around you...",
-                    fullContent: `<p>Studying physics has been like getting a new pair of eyes. Suddenly, a simple act like throwing a ball becomes a beautiful interplay of gravity, momentum, and air resistance. A microwave oven is a fascinating application of electromagnetic waves. This perspective makes the world a much more interesting place and constantly sparks new ideas for projects and experiments.</p>`
+                
                 },
                 {
                     id: 8,
-                    title: "What's Next? My Goals for Grade 10",
-                    meta: "May 1, 2025 | Future",
+                    title: "Gold Flames",
+                    meta: "May 25, 2025 | Regional SpringBots Competition",
                     image: "https://placehold.co/600x400/fde68a/22223b?text=Goals",
-                    excerpt: "Looking ahead, I'm setting my sights on new challenges and deeper learning in the coming year...",
-                    fullContent: `<p>As I look towards Grade 10, my goals are to dive deeper into advanced mathematics and physics. I also want to take on a leadership role in my school's robotics club, helping to mentor younger students. On the competition front, I'm aiming for a podium finish at the WRO and want to develop a science expo project that tackles a real-world environmental problem.</p>`
+                    excerpt: "I'm beyond excited to share that my teammates and I have just won a gold medal at the Regional Springbots Robotics Competition! It was an incredible experience, and we're all thrilled that our teamwork, creativity, and perseverance paid off. Huge thanks to my amazing teammates for their support and collaboration.💻...",
+                    fullContent: `<p>With this gold medal win, my team and i has qualified for the *National SpringBots Robotics Competition* , where we will face off against the best teams from across the country.</p>`
                 },
                 {
                     id: 9,
-                    title: "The Power of a Team",
-                    meta: "April 18, 2025 | Teamwork",
+                    title: "Radio Talks",
+                    meta: "April 13, 2025 | Radio Interview",
                     image: "https://placehold.co/600x400/0052cc/ffffff?text=Teamwork",
                     excerpt: "No major achievement is a solo effort. A reflection on the importance of collaboration...",
                     fullContent: `<p>Every medal I've won has been the result of a team effort. Whether it's my robotics teammates, my teachers, or my family, their support and collaboration have been essential. Learning to communicate effectively, resolve disagreements, and leverage each person's unique strengths is one of the most important skills I've developed through my STEM journey.</p>`
                 },
                 {
                     id: 10,
-                    title: "Inspiration in Science Fiction",
+                    title: "Frienships through Science",
                     meta: "April 2, 2025 | Inspiration",
                     image: "https://placehold.co/600x400/0d8fff/ffffff?text=Sci-Fi",
                     excerpt: "How the imaginative worlds of science fiction have fueled my passion for real-world science...",
