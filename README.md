@@ -760,7 +760,7 @@
                 },
                 {
                     id: 6,
-                    title: "i am Just a Boytjie from Couldridge Road",
+                    title: "I am Just a Boytjie from Couldridge Road",
                     meta: "June 19, 2025 | Spotlight on ME",
                     image: "https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0024.jpg?raw=true",
                     excerpt: "I'm still pinching myself, but I'm thrilled to share that I've been killing it in multiple areas ! 🎖️🎖️🎖️....",
@@ -797,15 +797,14 @@ click the link to see the post https://www.facebook.com/100063838813751/posts/12
                 {
                     id: 10,
                     title: "Frienships through Science",
-                    meta: "April 2, 2025 | Inspiration",
-                    image: "https://placehold.co/600x400/0d8fff/ffffff?text=Sci-Fi",
-                    excerpt: "How the imaginative worlds of science fiction have fueled my passion for real-world science...",
-                    fullContent: `<p>From Isaac Asimov's robot stories to the futuristic technology in movies, science fiction has always been a huge source of inspiration for me. It pushes the boundaries of what we think is possible and encourages us to ask 'What if?'. While it's fiction, it often lays the conceptual groundwork for future scientific breakthroughs. It's a reminder that the first step to creating the future is imagining it.</p>`
+                    meta: "April 2, 2025 | Connecting",
+                    image: "https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250830-WA0018.jpg?raw=true",
+                    excerpt: "I'm buzzing from a fascinating encounter I had at the International Science Fair - a chance meeting with a brilliant student from India! It's amazing how science can bridge gaps and connect minds from around the world. We exchanged ideas, shared our projects, and learned from each other's experiences. I also gave him a t- shirt....",
+                    fullContent: `<p>I hope our story inspires others to reach out, collaborate, and learn from each other. Who knows what amazing discoveries and innovations can come from these global connections?.</p>`
                 }
             ];
             
             const quotes = [
-                { quote: "The future belongs to those who believe in the beauty of their dreams.", author: "Eleanor Roosevelt" },
                 { quote: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
                 { quote: "Believe you can and you're halfway there.", author: "Theodore Roosevelt" },
                 { quote: "The best way to predict the future is to create it.", author: "Peter Drucker" },
