@@ -742,20 +742,21 @@
                     fullContent: `<p>As a token of appreciation for my visit, the Rotary Club gifted me with a travel bag and other goodies in preparation for my upcoming trip to Panama. Their thoughtfulness and generosity are truly appreciated!.</p>`
                 },
                 {
+            
                     id: 4,
-                    title: "The Importance of Sharing your Mark",
-                    meta: "June 20, 2025 | Radio Interview",
-                    image: "https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0027.jpg?raw=true",
-                    excerpt: "I had the opportunity to share insights on my journey and how it is to be a STEM learner. I discussed the importance of creating solutions for everyday problems , providing guidance on robotics and science, and fostering a growth mindset. I also shared my journey from being a curious grade 8 learner to a grade 9 Patersonain....",
-                    fullContent: `<p>In both robotics and my science fair projects, I've learned that you can't perfect a design on paper. It reveals flaws in your thinking that you'd never see otherwise. Each iteration, each broken part, is a lesson that leads to a better final product, That was my story.</p>`
-                },
-                {
-                    id: 5,
                     title: "Science Olympiad",
                     meta: "August 4, 2025 | Locked In: My Science Olympiad Experience 🔬",
                     image: "https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250804-WA0030.jpg?raw=true",
                     excerpt: "I sat down to write the Natural Science Olympiad test for a full hour, I felt a rush of focus. The questions were challenging, but I was determined to do my best.....",
                     fullContent: `<p> Time was a factor but I worked through the test, my mind fully engaged with the scientific concepts and problems. I was "locked in" – fully focused and concentrated on the task at hand.</p>`
+                },
+                {
+                    id: 5,
+                    title: "The Importance of Sharing your Mark",
+                    meta: "June 20, 2025 | Radio Interview",
+                    image: "https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0027.jpg?raw=true",
+                    excerpt: "I had the opportunity to share insights on my journey and how it is to be a STEM learner. I discussed the importance of creating solutions for everyday problems , providing guidance on robotics and science, and fostering a growth mindset. I also shared my journey from being a curious grade 8 learner to a grade 9 Patersonain....",
+                    fullContent: `<p>In both robotics and my science fair projects, I've learned that you can't perfect a design on paper. It reveals flaws in your thinking that you'd never see otherwise. Each iteration, each broken part, is a lesson that leads to a better final product, That was my story.</p>`
                 },
                 {
                     id: 6,
