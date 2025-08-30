@@ -352,6 +352,7 @@
             width: 100%;
             height: 200px;
             object-fit: cover;
+            cursor: pointer; /* Add cursor pointer to indicate it's clickable */
         }
         .blog-card-content {
             padding: 1.5em;
@@ -674,7 +675,7 @@
      <div id="lightbox-modal" class="modal-overlay">
         <div class="modal-content-wrapper">
             <span class="modal-close-btn" id="lightbox-close-btn">&times;</span>
-            <img class="lightbox-content" src="" alt="Enlarged gallery view">
+            <img class="lightbox-content" src="" alt="Enlarged image view">
         </div>
     </div>
  <div id="blog-modal" class="modal-overlay">
@@ -887,7 +888,7 @@ click the link to see the post https://www.facebook.com/100063838813751/posts/12
                 card.className = 'blog-card';
                 card.setAttribute('data-aos', 'fade-up');
                 card.innerHTML = `
-                    <img src="${post.image}" alt="Blog Post Image">
+                    <img src="${post.image}" alt="Blog Post Image" class="blog-image">
                     <div class="blog-card-content">
                         <div class="blog-meta">${post.meta}</div>
                         <h3 class="blog-title">${post.title}</h3>
@@ -896,6 +897,15 @@ click the link to see the post https://www.facebook.com/100063838813751/posts/12
                     </div>
                 `;
                 blogGrid.appendChild(card);
+            });
+            
+            // Add click event listener to blog images
+            const blogImages = document.querySelectorAll('.blog-image');
+            blogImages.forEach(img => {
+                img.addEventListener('click', () => {
+                    lightboxModal.style.display = 'flex';
+                    lightboxContent.src = img.src;
+                });
             });
 
             // Add event listeners for "Read More"
@@ -931,7 +941,7 @@ click the link to see the post https://www.facebook.com/100063838813751/posts/12
                 if (!el) return;
                 const phrases = [
                     "Curious. Ambitious. Always improving.",
-                    "Science. Robotics. Goal .",
+                    "Science. Robotics. Teamwork.",
                     "Chasing greater.",
                     "Let's build something amazing together!"
                 ];
