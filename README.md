@@ -781,8 +781,8 @@ click the link to see the post https://www.facebook.com/100063838813751/posts/12
                 {
                     id: 8,
                     title: "Gold Flames",
-                    meta: "May 25, 2025 | Regional SpringBots Competition",
-                    image: "https://placehold.co/600x400/fde68a/22223b?text=Goals",
+                    meta: "May 25, 2025 | Regional SpringBots Robotics Competition",
+                    image: "https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0007.jpg?raw=true",
                     excerpt: "I'm beyond excited to share that my teammates and I have just won a gold medal at the Regional Springbots Robotics Competition! It was an incredible experience, and we're all thrilled that our teamwork, creativity, and perseverance paid off. Huge thanks to my amazing teammates for their support and collaboration.💻...",
                     fullContent: `<p>With this gold medal win, my team and i has qualified for the *National SpringBots Robotics Competition* , where we will face off against the best teams from across the country.</p>`
                 },
@@ -791,8 +791,8 @@ click the link to see the post https://www.facebook.com/100063838813751/posts/12
                     title: "Radio Talks",
                     meta: "April 13, 2025 | Radio Interview",
                     image: "https://placehold.co/600x400/0052cc/ffffff?text=Teamwork",
-                    excerpt: "No major achievement is a solo effort. A reflection on the importance of collaboration...",
-                    fullContent: `<p>Every medal I've won has been the result of a team effort. Whether it's my robotics teammates, my teachers, or my family, their support and collaboration have been essential. Learning to communicate effectively, resolve disagreements, and leverage each person's unique strengths is one of the most important skills I've developed through my STEM journey.</p>`
+                    excerpt: "Recently, I had the opportunity to share my story on the radio. The interviewer asked me to introduce myself, talk about what I do as a high school student, and what I aspire to be.. This radio interview was a great opportunity for me to reflect on my journey so far. As a high school student, I'm constantly learning and growing. I'm excited to see what the future holds and how I can make a positive impact in the world...",
+                    fullContent: `<p>"The best way to predict your future is to create it." - Abraham Lincoln.</p>`
                 },
                 {
                     id: 10,
