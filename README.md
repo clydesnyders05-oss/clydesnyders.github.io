@@ -460,6 +460,7 @@
             <a href="#achievements" class="nav-link">Achievements</a>
             <a href="#gallery" class="nav-link">Gallery</a>
             <a href="#blog" class="nav-link">Blog</a>
+            <a href="#impact" class="nav-link">Impact</a>
             <a href="#timeline" class="nav-link">Trajectory</a>
             <a href="#inspiration" class="nav-link">Inspiration</a>
             <a href="#contact" class="nav-link">Contact</a>
@@ -475,6 +476,7 @@
         <a href="#achievements" class="nav-link text-xl">Achievements</a>
         <a href="#gallery" class="nav-link text-xl">Gallery</a>
         <a href="#blog" class="nav-link text-xl">Blog</a>
+        <a href="#impact" class="nav-link text-xl">Impact</a>
         <a href="#timeline" class="nav-link text-xl">Trajectory</a>
         <a href="#inspiration" class="nav-link text-xl">Inspiration</a>
         <a href="#contact" class="nav-link text-xl">Contact</a>
@@ -596,23 +598,48 @@
             <button class="filter-btn" data-filter="robotics">Robotics</button>
             <button class="filter-btn" data-filter="expo">Science Expo</button>
             <button class="filter-btn" data-filter="awards">Awards</button>
+            <button class="filter-btn" data-filter="community">Community</button>
         </div>
         <div class="gallery-grid">
             <div class="gallery-item" data-category="robotics" data-aos="zoom-in">
                 <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0002.jpg?raw=true" alt="Robotics Project">
-                <div class="overlay">WRO 2024</div>
+                <div class="overlay">WRO 2024 Team</div>
             </div>
             <div class="gallery-item" data-category="expo" data-aos="zoom-in" data-aos-delay="100">
                 <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0003.jpg?raw=true" alt="Science Expo">
-                <div class="overlay">Regional Science Fair</div>
+                <div class="overlay">Regional Science Fair Project</div>
             </div>
             <div class="gallery-item" data-category="awards" data-aos="zoom-in" data-aos-delay="200">
-                <img src="https://placehold.co/400x400/0052cc/fde68a?text=Gold+Medal" alt="Award Ceremony">
-                <div class="overlay">Gold Medal</div>
+                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0024.jpg?raw=true" alt="Award Ceremony">
+                <div class="overlay">ISF Bronze Medal</div>
             </div>
             <div class="gallery-item" data-category="robotics" data-aos="zoom-in" data-aos-delay="300">
-                <img src="https://placehold.co/400x400/0d8fff/ffffff?text=Robotics+Team" alt="Robotics Team">
-                <div class="overlay">Springbots Team</div>
+                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250830-WA0034.jpg?raw=true" alt="Robotics Team">
+                <div class="overlay">Springbots National Competition</div>
+            </div>
+            <div class="gallery-item" data-category="expo" data-aos="zoom-in" data-aos-delay="100">
+                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0022.jpg?raw=true" alt="Science Week">
+                <div class="overlay">National Science Week at NMU</div>
+            </div>
+             <div class="gallery-item" data-category="robotics" data-aos="zoom-in">
+                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250830-WA0023.jpg?raw=true" alt="WRO 2025">
+                <div class="overlay">WRO 2025 Team</div>
+            </div>
+            <div class="gallery-item" data-category="community" data-aos="zoom-in" data-aos-delay="200">
+                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250830-WA0024.jpg?raw=true" alt="Community Speaking">
+                <div class="overlay">Speaking at Rotary Club</div>
+            </div>
+             <div class="gallery-item" data-category="awards" data-aos="zoom-in" data-aos-delay="300">
+                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0007.jpg?raw=true" alt="Gold Medal">
+                <div class="overlay">Regional Springbots Gold Medal</div>
+            </div>
+            <div class="gallery-item" data-category="community" data-aos="zoom-in" data-aos-delay="400">
+                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0006.jpg?raw=true" alt="Radio Interview">
+                <div class="overlay">Radio Interview</div>
+            </div>
+             <div class="gallery-item" data-category="expo" data-aos="zoom-in" data-aos-delay="500">
+                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250830-WA0018.jpg?raw=true" alt="International Science Fair">
+                <div class="overlay">Connecting at ISF</div>
             </div>
         </div>
     </section>
@@ -621,6 +648,41 @@
         <div class="section-subtitle">Sharing my thoughts on technology, learning experiences, and project deep dives.</div>
         <div class="blog-grid">
             </div>
+    </section>
+    <section id="impact" class="section" data-aos="fade-up">
+        <div class="section-title">Impact & Community</div>
+        <div class="section-subtitle">Beyond competitions, I believe in sharing knowledge and inspiring others.</div>
+        <div class="grid md:grid-cols-2 gap-8 items-start">
+            <div class="card" data-aos="fade-right">
+                <h3 class="achievement-title mb-2">Mentorship & Workshops</h3>
+                <p>I actively mentor junior members of our school's robotics club, helping them grasp foundational concepts in programming and building. I've also co-hosted an "Introduction to Block Coding" workshop for Grade 8 learners to spark their interest in STEM from an early age and show them that technology is accessible to everyone.</p>
+            </div>
+            <div class="card" data-aos="fade-left">
+                <h3 class="achievement-title mb-2">Community Contribution</h3>
+                <p>During National Science Week, I volunteered at a local science centre, demonstrating simple physics experiments to children from underprivileged communities. Seeing their eyes light up with curiosity was incredibly rewarding and reinforced my desire to make science engaging and inclusive.</p>
+            </div>
+        </div>
+        <div class="mt-12" data-aos="fade-up">
+             <h3 class="text-2xl font-bold mb-4 text-center" style="font-family:var(--header-font); color: var(--primary);">Mini Stories</h3>
+             <div class="grid md:grid-cols-2 gap-8">
+                 <div class="card">
+                     <h4 class="font-bold text-lg mb-2 text-gray-700">The 'Aha!' Moment</h4>
+                     <p>I spent an afternoon helping a teammate debug their code for our robot's arm. We were both frustrated, but by breaking the problem down step-by-step, we found the single misplaced bracket causing the issue. The look of relief and understanding on their face—that "aha!" moment—was a better reward than any medal.</p>
+                 </div>
+                 <div class="card">
+                     <h4 class="font-bold text-lg mb-2 text-gray-700">From Learner to Leader</h4>
+                     <p>A year ago, I was the one asking all the questions. Recently, a group of new Grade 8 students came to me for advice on their science expo project. Guiding them through the scientific method and helping them refine their hypothesis felt like a full-circle moment. It taught me that leadership is about empowering others to succeed.</p>
+                 </div>
+             </div>
+        </div>
+        <div class="max-w-2xl mx-auto text-center mt-16" data-aos="zoom-in">
+            <div class="text-xl italic mb-4 text-gray-700">
+                "What counts in life is not the mere fact that we have lived. It is what difference we have made to the lives of others that will determine the significance of the life we lead."
+            </div>
+            <div class="font-bold text-gray-600">
+                - Nelson Mandela
+            </div>
+        </div>
     </section>
   <section id="timeline" class="section" data-aos="fade-up">
         <div class="section-title">My Trajectory</div>
