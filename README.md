@@ -649,37 +649,65 @@
         <div class="blog-grid">
             </div>
     </section>
-    <section id="impact" class="section" data-aos="fade-up">
+    <section id="impact" class="section bg-white" data-aos="fade-up">
         <div class="section-title">Impact & Community</div>
-        <div class="section-subtitle">Beyond competitions, I believe in sharing knowledge and inspiring others.</div>
-        <div class="grid md:grid-cols-2 gap-8 items-start">
-            <div class="card" data-aos="fade-right">
-                <h3 class="achievement-title mb-2">Mentorship & Workshops</h3>
-                <p>I actively mentor junior members of our school's robotics club, helping them grasp foundational concepts in programming and building. I've also co-hosted an "Introduction to Block Coding" workshop for Grade 8 learners to spark their interest in STEM from an early age and show them that technology is accessible to everyone.</p>
+        <div class="section-subtitle">Using my skills in STEM to uplift, educate, and innovate for a better community.</div>
+
+<div class="flex flex-col md:flex-row-reverse gap-8 items-center mb-12">
+            <div class="md:w-1/2" data-aos="fade-left">
+                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250830-WA0023.jpg?raw=true" alt="Mentoring robotics team" class="rounded-lg shadow-lg w-full">
             </div>
-            <div class="card" data-aos="fade-left">
-                <h3 class="achievement-title mb-2">Community Contribution</h3>
-                <p>During National Science Week, I volunteered at a local science centre, demonstrating simple physics experiments to children from underprivileged communities. Seeing their eyes light up with curiosity was incredibly rewarding and reinforced my desire to make science engaging and inclusive.</p>
+            <div class="md:w-1/2" data-aos="fade-right">
+                <h3 class="text-3xl font-bold mb-4" style="font-family:var(--header-font); color: var(--primary);">Peer Mentorship & Knowledge Sharing</h3>
+                <p class="mb-4">I lead the "STEM Spark Initiative" at my school, a peer-to-peer mentorship program where senior robotics members guide newcomers. We host weekly workshops on everything from basic block coding to sensor integration. My goal is to demystify complex topics and create a collaborative environment where every student feels empowered to build and innovate.</p>
+                <div class="flex items-center text-secondary font-bold">
+                     <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    <span>15+ junior students mentored in 2025.</span>
+                </div>
             </div>
         </div>
-        <div class="mt-12" data-aos="fade-up">
-             <h3 class="text-2xl font-bold mb-4 text-center" style="font-family:var(--header-font); color: var(--primary);">Mini Stories</h3>
+
+  <div class="card my-16 bg-gray-50" data-aos="zoom-in-up">
+            <div class="text-center mb-6">
+                <h3 class="text-3xl font-bold" style="font-family:var(--header-font); color: var(--primary);">Future Forward: AI for Social Good</h3>
+                <p class="text-lg text-gray-600 mt-2">Conceptualizing solutions for local challenges with cutting-edge technology.</p>
+            </div>
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="md:w-1/3 text-center">
+                    <img src="https://placehold.co/400x400/0052cc/FFFFFF?text=AI" alt="AI Project Icon" class="rounded-full w-48 h-48 mx-auto shadow-md border-4 border-white">
+                </div>
+                <div class="md:w-2/3">
+                    <h4 class="achievement-title">Project Impilo: An AI-Powered Health & Science Guide</h4>
+                    <p class="my-3">I am developing a concept for "Project Impilo," a web-based application designed to bridge the information gap for students in the Eastern Cape. Leveraging the power of Large Language Models via the Gemini API, this tool aims to provide instant, reliable, and curriculum-aligned answers to science and health questions.</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Multi-lingual Support:</strong> Offering explanations in English, isiXhosa, and Afrikaans to ensure accessibility for all learners.</li>
+                        <li><strong>Curriculum-Aligned Q&A:</strong> Trained on local school curriculum to help students with homework and exam preparation.</li>
+                        <li><strong>STEM Career Guidance:</strong> Providing information on local bursaries, university requirements, and potential careers in STEM fields.</li>
+                    </ul>
+                     <p class="text-sm text-gray-500 mt-4 font-semibold">Technology Focus: Gemini API Integration</p>
+                </div>
+            </div>
+        </div>
+        
+  <div class="mt-12" data-aos="fade-up">
+             <h3 class="text-3xl font-bold mb-6 text-center" style="font-family:var(--header-font); color: var(--primary);">Impact Stories</h3>
              <div class="grid md:grid-cols-2 gap-8">
-                 <div class="card">
-                     <h4 class="font-bold text-lg mb-2 text-gray-700">The 'Aha!' Moment</h4>
-                     <p>I spent an afternoon helping a teammate debug their code for our robot's arm. We were both frustrated, but by breaking the problem down step-by-step, we found the single misplaced bracket causing the issue. The look of relief and understanding on their face—that "aha!" moment—was a better reward than any medal.</p>
+                 <div class="card p-6 border-l-4 border-secondary">
+                     <p class="italic text-gray-600 mb-4">"I was completely stuck on how to code the distance sensor for my project. Clyde didn't just give me the answer; he sat with me and drew diagrams to explain how it works. That 'aha!' moment was because of his patience."</p>
+                     <p class="font-bold text-right">- Grade 8 Robotics Club Member</p>
                  </div>
-                 <div class="card">
-                     <h4 class="font-bold text-lg mb-2 text-gray-700">From Learner to Leader</h4>
-                     <p>A year ago, I was the one asking all the questions. Recently, a group of new Grade 8 students came to me for advice on their science expo project. Guiding them through the scientific method and helping them refine their hypothesis felt like a full-circle moment. It taught me that leadership is about empowering others to succeed.</p>
+                 <div class="card p-6 border-l-4 border-accent">
+                     <p class="italic text-gray-600 mb-4">"Hearing Clyde speak at the Rotary Club meeting was inspiring. It's not often you see a young person with such clarity and passion. He is a fantastic ambassador for the youth in our community and a testament to his school."</p>
+                      <p class="font-bold text-right">- Algoa Bay Rotary Club Member</p>
                  </div>
              </div>
         </div>
-        <div class="max-w-2xl mx-auto text-center mt-16" data-aos="zoom-in">
-            <div class="text-xl italic mb-4 text-gray-700">
+        
+   <div class="max-w-3xl mx-auto text-center mt-16" data-aos="zoom-in">
+        <div class="text-2xl italic mb-4 text-gray-700">
                 "What counts in life is not the mere fact that we have lived. It is what difference we have made to the lives of others that will determine the significance of the life we lead."
             </div>
-            <div class="font-bold text-gray-600">
+            <div class="font-bold text-gray-600 text-lg">
                 - Nelson Mandela
             </div>
         </div>
