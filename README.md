@@ -519,11 +519,11 @@
                         <div class="skill-bar-bg"><div class="skill-bar" style="width:81.5%"></div></div>
                     </div>
                     <div>
-                        <div class="flex justify-between items-center mb-1"><span>Robotics</span><span>88%</span></div>
+                        <div class="flex justify-between items-center mb-1"><span>Robotics</span><span>99%</span></div>
                         <div class="skill-bar-bg"><div class="skill-bar" style="width:88%"></div></div>
                     </div>
                     <div>
-                        <div class="flex justify-between items-center mb-1"><span>Engineering Design</span><span>85%</span></div>
+                        <div class="flex justify-between items-center mb-1"><span>Critically Thinking </span><span>99%</span></div>
                         <div class="skill-bar-bg"><div class="skill-bar" style="width:85%"></div></div>
                     </div>
                 </div>
@@ -757,7 +757,180 @@
   </label> 
   <button type="submit" class="w-full">Send Message</button> 
 </form>
+    <section id="forum-nexus" class="relative overflow-hidden py-16 sm:py-24">
+  <div class="aurora-background"></div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <header class="text-center mb-12 md:mb-16" data-aos="fade-down">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-800 tracking-tight">
+        The Innovation Nexus
+      </h2>
+      <p class="mt-3 max-w-2xl mx-auto text-lg text-slate-600">
+        A dynamic ecosystem where creators, thinkers, and builders converge to share knowledge and shape the future. 🧠⚡
+      </p>
+    </header>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      <figure class="nexus-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="card-icon-wrapper">
+          <svg class="h-10 w-10 text-yellow-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.562L16.25 22.5l-.648-1.938a3.375 3.375 0 00-2.685-2.685L11.25 18l1.938-.648a3.375 3.375 0 002.685-2.685L16.25 13.5l.648 1.938a3.375 3.375 0 002.685 2.685L21 18.75l-1.938.648a3.375 3.375 0 00-2.685 2.685z" />
+          </svg>
         </div>
+        <figcaption class="text-center">
+          <h3 class="text-xl font-semibold text-slate-800">Inquiry</h3>
+          <p class="mt-2 text-slate-600">Champion bold questions and drive discovery beyond the known.</p>
+        </figcaption>
+      </figure>
+
+  <figure class="nexus-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="card-icon-wrapper">
+          <svg class="h-10 w-10 text-sky-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+          </svg>
+        </div>
+        <figcaption class="text-center">
+          <h3 class="text-xl font-semibold text-slate-800">Synergy</h3>
+          <p class="mt-2 text-slate-600">Fuse diverse talents and resources to engineer groundbreaking solutions.</p>
+        </figcaption>
+     </figure>
+
+   <figure class="nexus-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="card-icon-wrapper">
+          <svg class="h-10 w-10 text-emerald-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <figcaption class="text-center">
+          <h3 class="text-xl font-semibold text-slate-800">Integrity</h3>
+          <p class="mt-2 text-slate-600">Foster a culture of respect where constructive and inclusive discourse thrives.</p>
+        </figcaption>
+      </figure>
+    </div>
+
+ <article class="max-w-5xl mx-auto p-8 bg-slate-50/70 backdrop-blur-lg rounded-xl border border-slate-200 shadow-xl" data-aos="zoom-in-up">
+      <header class="text-center mb-6">
+        <h3 class="text-2xl font-bold text-slate-800">
+          Engage with the Community
+        </h3>
+        <p class="mt-2 text-slate-600">
+        Deploy your projects, troubleshoot complex problems, or find collaborators for your next big idea.
+        </p>
+  </header>
+      
+ <div class="text-center py-12 border-2 border-dashed border-slate-300 rounded-lg bg-slate-100/50">
+        <p class="text-slate-500 font-medium">[Giscus Forum Component Mounts Here]</p>
+      </div>
+    </article>
+    
+  </div>
+</section>
+
+<style>
+  /* Define CSS variables for easier theming and consistency */
+  :root {
+    --glow-color: hsl(210, 100%, 75%);
+    --aurora-bg: radial-gradient(40% 50% at 10% 20%, #a7f3d0 0%, #a5b4fc00 100%),
+                 radial-gradient(40% 50% at 80% 30%, #fde047 0%, #a5b4fc00 100%),
+                 radial-gradient(50% 60% at 50% 90%, #67e8f9 0%, #a5b4fc00 100%);
+  }
+
+  /* Animated Aurora Background Effect */
+  .aurora-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f1f5f9; /* Fallback color */
+    background-image: var(--aurora-bg);
+    animation: aurora-flow 20s linear infinite;
+    z-index: 0;
+  }
+
+  @keyframes aurora-flow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Glassmorphism Card Styling with Glow Effect */
+  .nexus-card {
+    position: relative;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+
+  /* Pseudo-element for the glowing border */
+  .nexus-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 1rem;
+    border: 2px solid transparent;
+    background: conic-gradient(from var(--angle), transparent 0%, var(--glow-color) 20%, transparent 35%) border-box;
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    animation: rotate-glow 5s linear infinite paused;
+  }
+
+  /* Animate border on hover */
+  .nexus-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  }
+
+  .nexus-card:hover::before {
+    opacity: 1;
+    animation-play-state: running;
+  }
+
+  @property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+
+  @keyframes rotate-glow {
+    to { --angle: 360deg; }
+  }
+  
+  /* Icon Wrapper and Animation */
+  .card-icon-wrapper {
+    margin: 0 auto 1.5rem auto;
+    width: fit-content;
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  .nexus-card:nth-of-type(2) .card-icon-wrapper {
+    animation-delay: 0.5s;
+  }
+  .nexus-card:nth-of-type(3) .card-icon-wrapper {
+    animation-delay: 1s;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }  
+
+</style>
+       </div>
     </section>
      <footer class="footer text-center py-10">
         <div>© 2025 Clyde Snyders — All rights reserved.</div>
