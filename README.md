@@ -488,7 +488,7 @@
             <div class="hero-subtitle">
                 Grade 9 Student | Paterson High School | Eastern Cape
             </div>
-            <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0021.jpg?raw=true" alt="C.Snyders" class="mx-auto rounded-lg shadow-md mt-4 w-50 h-64">
+            <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0021.jpg?raw=true" alt="C.Snyders" class="mx-auto rounded-lg shadow-md mt-4 w-50 h-70">
             <div style="margin-top:2em;">
                 <span id="typing-effect" class="text-xl md:text-2xl" style="font-family:monospace;"></span>
             </div>
@@ -603,15 +603,15 @@
         <div class="gallery-grid">
             <div class="gallery-item" data-category="robotics" data-aos="zoom-in">
                 <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0002.jpg?raw=true" alt="Robotics Project">
-                <div class="overlay">WRO 2024 Team</div>
+                <div class="overlay">Bronze Medal Winner at ISF</div>
             </div>
             <div class="gallery-item" data-category="expo" data-aos="zoom-in" data-aos-delay="100">
                 <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0003.jpg?raw=true" alt="Science Expo">
-                <div class="overlay">Regional Science Fair Project</div>
+                <div class="overlay">Academic Awards</div>
             </div>
             <div class="gallery-item" data-category="awards" data-aos="zoom-in" data-aos-delay="200">
                 <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0024.jpg?raw=true" alt="Award Ceremony">
-                <div class="overlay">ISF Bronze Medal</div>
+                <div class="overlay">Lad from Paterson High</div>
             </div>
             <div class="gallery-item" data-category="robotics" data-aos="zoom-in" data-aos-delay="300">
                 <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250830-WA0034.jpg?raw=true" alt="Robotics Team">
