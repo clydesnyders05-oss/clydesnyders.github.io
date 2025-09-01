@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clyde Snyders - Advanced 3D Portfolio</title>
+    <meta name="description" content="The professional portfolio for Clyde Snyders, a Grade 9 student from Paterson High School specializing in STEM, robotics, and science." />
+    <title>Clyde Snyders - Student & Innovator Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -122,6 +123,10 @@
             font-family: var(--header-font);
             font-size: clamp(2.5rem, 6vw, 4.5rem);
             font-weight: 700;
+        }
+        .hero-subtitle-text {
+            margin-top: 2em;
+            font-family: monospace;
         }
         .section {
             padding: 5rem 1.5rem;
@@ -328,7 +333,6 @@
             line-height: 1.6;
         }
 
-
         /* Blog Section */
         .blog-grid {
             display: grid;
@@ -352,7 +356,7 @@
             width: 100%;
             height: 200px;
             object-fit: cover;
-            cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+            cursor: pointer;
         }
         .blog-card-content {
             padding: 1.5em;
@@ -385,6 +389,21 @@
             cursor: pointer;
         }
 
+        /* Contact Form Button Styling */
+        .contact-form button {
+            background: var(--secondary);
+            color: white;
+            font-weight: 700;
+            padding: 0.8em 1.5em;
+            border-radius: 999px;
+            transition: background 0.2s, transform 0.2s;
+            border: none;
+        }
+        .contact-form button:hover {
+            background: var(--primary);
+            transform: scale(1.05);
+        }
+        
         /* Footer */
         .footer {
             background: var(--text-main);
@@ -451,8 +470,9 @@
     <div id="preloader">
         <div class="loader"></div>
     </div>
-     <nav class="flex items-center justify-between px-6 py-4">
-        <div class="font-bold text-2xl" style="font-family: var(--header-font);"><a href="#home">Clyde Snyders</a></div>
+
+ <nav class="flex items-center justify-between px-6 py-4">
+        <a href="#home" class="font-bold text-2xl" style="font-family: var(--header-font);">Clyde Snyders</a>
         <div id="desktop-nav" class="space-x-2">
             <a href="#home" class="nav-link">Home</a>
             <a href="#about" class="nav-link">About</a>
@@ -462,14 +482,15 @@
             <a href="#blog" class="nav-link">Blog</a>
             <a href="#impact" class="nav-link">Impact</a>
             <a href="#timeline" class="nav-link">Trajectory</a>
-            <a href="#inspiration" class="nav-link">Inspiration</a>
             <a href="#contact" class="nav-link">Contact</a>
         </div>
         <button id="mobile-menu-btn" class="md:hidden text-2xl">
-            <i class="fas fa-bars"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
         </button>
     </nav>
-  <div id="mobile-nav" class="flex flex-col items-center space-y-6">
+    <div id="mobile-nav" class="flex flex-col items-center space-y-6">
         <a href="#home" class="nav-link text-xl">Home</a>
         <a href="#about" class="nav-link text-xl">About</a>
         <a href="#academics" class="nav-link text-xl">Academics</a>
@@ -478,9 +499,9 @@
         <a href="#blog" class="nav-link text-xl">Blog</a>
         <a href="#impact" class="nav-link text-xl">Impact</a>
         <a href="#timeline" class="nav-link text-xl">Trajectory</a>
-        <a href="#inspiration" class="nav-link text-xl">Inspiration</a>
         <a href="#contact" class="nav-link text-xl">Contact</a>
     </div>
+
   <section id="home" class="hero" data-aos="fade-in">
         <canvas id="three-canvas"></canvas>
         <div class="hero-content">
@@ -488,18 +509,19 @@
             <div class="hero-subtitle">
                 Grade 9 Student | Paterson High School | Eastern Cape
             </div>
-            <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0021.jpg?raw=true" alt="C.Snyders" class="mx-auto rounded-lg shadow-md mt-4 w-50 h-70">
-            <div style="margin-top:2em;">
-                <span id="typing-effect" class="text-xl md:text-2xl" style="font-family:monospace;"></span>
+            <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0021.jpg?raw=true" alt="Portrait of Clyde Snyders" class="mx-auto rounded-lg shadow-md mt-4 w-50 h-70">
+            <div class="hero-subtitle-text">
+                <span id="typing-effect" class="text-xl md:text-2xl"></span>
             </div>
         </div>
-    </section>
-     <section id="about" class="section" data-aos="fade-up">
+   </section>
+
+  <section id="about" class="section" data-aos="fade-up">
         <div class="section-title">About Me</div>
         <div class="section-subtitle">A driven and curious student, passionate about science, technology, and growth.</div>
         <div class="flex flex-col md:flex-row gap-12 items-center">
             <div class="md:w-1/3 text-center">
-                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0008.jpg?raw=true" alt="C.Snyders" class="mx-auto w-70 h-70 rounded-full object-cover shadow-lg">
+                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0008.jpg?raw=true" alt="Clyde Snyders at a school event" class="mx-auto w-70 h-70 rounded-full object-cover shadow-lg">
             </div>
             <div class="md:w-2/3">
                 <p class="mb-4 text-lg">
@@ -523,14 +545,15 @@
                         <div class="skill-bar-bg"><div class="skill-bar" style="width:88%"></div></div>
                     </div>
                     <div>
-                        <div class="flex justify-between items-center mb-1"><span>Critically Thinking </span><span>99%</span></div>
+                        <div class="flex justify-between items-center mb-1"><span>Critical Thinking </span><span>99%</span></div>
                         <div class="skill-bar-bg"><div class="skill-bar" style="width:85%"></div></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-       <section id="academics" class="section" data-aos="fade-up">
+
+ <section id="academics" class="section" data-aos="fade-up">
         <div class="section-title">Academic Performance</div>
         <div class="section-subtitle">My Grade 9 results reflect a commitment to excellence across diverse subjects.</div>
         <div class="card overflow-x-auto max-w-2xl mx-auto">
@@ -554,11 +577,12 @@
             </table>
         </div>
     </section>
-   <section id="achievements" class="section" data-aos="fade-up">
+
+ <section id="achievements" class="section" data-aos="fade-up">
         <div class="section-title">Key Achievements</div>
         <div class="section-subtitle">Milestones from national and international competitions.</div>
         <div class="achievements-grid">
-            <div class="card" data-aos="zoom-in">
+             <div class="card" data-aos="zoom-in">
                 <div class="achievement-title">Gold Medal: Regional Science Expo</div>
                 <div class="achievement-year">2025</div>
                 <p>Awarded a gold medal for the second consecutive year and won Best Category in Physics. Showcased a passion for experimentation and discovery.</p>
@@ -590,7 +614,8 @@
             </div>
         </div>
     </section>
-     <section id="gallery" class="section" data-aos="fade-up">
+
+ <section id="gallery" class="section" data-aos="fade-up">
         <div class="section-title">Gallery</div>
         <div class="section-subtitle">A visual journey through my projects, competitions, and awards.</div>
         <div class="gallery-filters">
@@ -602,58 +627,59 @@
         </div>
         <div class="gallery-grid">
             <div class="gallery-item" data-category="robotics" data-aos="zoom-in">
-                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0002.jpg?raw=true" alt="Robotics Project">
+                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0002.jpg?raw=true" alt="Receiving a bronze medal at ISF">
                 <div class="overlay">Bronze Medal Winner at ISF</div>
             </div>
             <div class="gallery-item" data-category="expo" data-aos="zoom-in" data-aos-delay="100">
-                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0003.jpg?raw=true" alt="Science Expo">
+                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0003.jpg?raw=true" alt="Displaying academic awards">
                 <div class="overlay">Academic Awards</div>
             </div>
             <div class="gallery-item" data-category="awards" data-aos="zoom-in" data-aos-delay="200">
-                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0024.jpg?raw=true" alt="Award Ceremony">
+                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0024.jpg?raw=true" alt="Clyde Snyders from Paterson High">
                 <div class="overlay">Lad from Paterson High</div>
             </div>
             <div class="gallery-item" data-category="robotics" data-aos="zoom-in" data-aos-delay="300">
-                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250830-WA0034.jpg?raw=true" alt="Robotics Team">
+                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250830-WA0034.jpg?raw=true" alt="Robotics team at Springbots competition">
                 <div class="overlay">Springbots National Competition</div>
             </div>
             <div class="gallery-item" data-category="expo" data-aos="zoom-in" data-aos-delay="100">
-                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0022.jpg?raw=true" alt="Science Week">
+                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0022.jpg?raw=true" alt="Attending National Science Week at NMU">
                 <div class="overlay">National Science Week at NMU</div>
             </div>
              <div class="gallery-item" data-category="robotics" data-aos="zoom-in">
-                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250830-WA0023.jpg?raw=true" alt="WRO 2025">
+                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250830-WA0023.jpg?raw=true" alt="WRO 2025 Robotics Team">
                 <div class="overlay">WRO 2025 Team</div>
             </div>
             <div class="gallery-item" data-category="community" data-aos="zoom-in" data-aos-delay="200">
-                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250830-WA0024.jpg?raw=true" alt="Community Speaking">
+                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250830-WA0024.jpg?raw=true" alt="Speaking at a Rotary Club meeting">
                 <div class="overlay">Speaking at Rotary Club</div>
             </div>
              <div class="gallery-item" data-category="awards" data-aos="zoom-in" data-aos-delay="300">
-                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0007.jpg?raw=true" alt="Gold Medal">
+                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0007.jpg?raw=true" alt="Team holding gold medal for regional Springbots">
                 <div class="overlay">Regional Springbots Gold Medal</div>
             </div>
             <div class="gallery-item" data-category="community" data-aos="zoom-in" data-aos-delay="400">
-                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0006.jpg?raw=true" alt="Radio Interview">
+                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0006.jpg?raw=true" alt="Clyde Snyders during a radio interview">
                 <div class="overlay">Radio Interview</div>
             </div>
              <div class="gallery-item" data-category="expo" data-aos="zoom-in" data-aos-delay="500">
-                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250830-WA0018.jpg?raw=true" alt="International Science Fair">
+                <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250830-WA0018.jpg?raw=true" alt="Connecting with a peer at the International Science Fair">
                 <div class="overlay">Connecting at ISF</div>
             </div>
         </div>
     </section>
-   <section id="blog" class="section" data-aos="fade-up">
+
+  <section id="blog" class="section" data-aos="fade-up">
         <div class="section-title">My Blog</div>
         <div class="section-subtitle">Sharing my thoughts on technology, learning experiences, and project deep dives.</div>
         <div class="blog-grid">
             </div>
     </section>
-    <section id="impact" class="section bg-white" data-aos="fade-up">
+
+ <section id="impact" class="section bg-white" data-aos="fade-up">
         <div class="section-title">Impact & Community</div>
         <div class="section-subtitle">Using my skills in STEM to uplift, educate, and innovate for a better community.</div>
-
-<div class="flex flex-col md:flex-row-reverse gap-8 items-center mb-12">
+        <div class="flex flex-col md:flex-row-reverse gap-8 items-center mb-12">
             <div class="md:w-1/2" data-aos="fade-left">
                 <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250830-WA0023.jpg?raw=true" alt="Mentoring robotics team" class="rounded-lg shadow-lg w-full">
             </div>
@@ -667,7 +693,7 @@
             </div>
         </div>
 
-  <div class="card my-16 bg-gray-50" data-aos="zoom-in-up">
+   <div class="card my-16 bg-gray-50" data-aos="zoom-in-up">
             <div class="text-center mb-6">
                 <h3 class="text-3xl font-bold" style="font-family:var(--header-font); color: var(--primary);">Future Forward: AI for Social Good</h3>
                 <p class="text-lg text-gray-600 mt-2">Conceptualizing solutions for local challenges with cutting-edge technology.</p>
@@ -689,7 +715,7 @@
             </div>
         </div>
         
-  <div class="mt-12" data-aos="fade-up">
+ <div class="mt-12" data-aos="fade-up">
              <h3 class="text-3xl font-bold mb-6 text-center" style="font-family:var(--header-font); color: var(--primary);">Impact Stories</h3>
              <div class="grid md:grid-cols-2 gap-8">
                  <div class="card p-6 border-l-4 border-secondary">
@@ -703,8 +729,8 @@
              </div>
         </div>
         
-   <div class="max-w-3xl mx-auto text-center mt-16" data-aos="zoom-in">
-        <div class="text-2xl italic mb-4 text-gray-700">
+  <div class="max-w-3xl mx-auto text-center mt-16" data-aos="zoom-in">
+            <div class="text-2xl italic mb-4 text-gray-700">
                 "What counts in life is not the mere fact that we have lived. It is what difference we have made to the lives of others that will determine the significance of the life we lead."
             </div>
             <div class="font-bold text-gray-600 text-lg">
@@ -712,7 +738,8 @@
             </div>
         </div>
     </section>
-  <section id="timeline" class="section" data-aos="fade-up">
+
+ <section id="timeline" class="section" data-aos="fade-up">
         <div class="section-title">My Trajectory</div>
         <div class="section-subtitle">Key milestones shaping my high school journey.</div>
         <ul class="timeline-list">
@@ -726,222 +753,81 @@
             <li><strong>Jan 2024:</strong> Joined Paterson High — Began my high school journey with a focus on academic excellence.</li>
         </ul>
     </section>
-  <section id="inspiration" class="section" data-aos="fade-up">
-        <div class="section-title">Daily Inspiration</div>
-        <div class="section-subtitle">A little motivation to keep going.</div>
-        <div class="max-w-xl mx-auto card text-center">
-            <div id="quote-container" class="text-xl italic mb-4">
-                "The future belongs to those who believe in the beauty of their dreams."
-            </div>
-            <div id="quote-author" class="font-bold text-gray-600">
-                - Eleanor Roosevelt
-            </div>
-            <button id="generate-quote-btn" class="mt-6 px-6 py-2 bg-secondary text-white font-bold rounded-lg transition-colors duration-200 hover:bg-primary">
-                Generate a new quote
-            </button>
-        </div>
-    </section>
-     <section id="contact" class="section" data-aos="fade-up">
+
+ <section id="contact" class="section" data-aos="fade-up">
         <div class="section-title">Get In Touch</div>
         <div class="section-subtitle">I'm always open to new challenges and opportunities. Let's connect!</div>
-        <div class="max-w-xl mx-auto card">
-           <form 
-    action="https://formspree.io/f/xgvlvvnn" method="POST" class="contact-form"> 
-  <label class="block mb-4"> 
-    <span class="text-gray-700">Your Email:</span> 
-    <input type="email" name="email" class="mt-1 block w-full" placeholder="you@example.com" required> 
-  </label> 
-  <label class="block mb-4"> 
-    <span class="text-gray-700">Your Message:</span> 
-    <textarea name="message" rows="4" class="mt-1 block w-full" placeholder="Let's build something amazing together!" required></textarea> 
-  </label> 
-  <button type="submit" class="w-full">Send Message</button> 
-</form>
-    <section id="forum-nexus" class="relative overflow-hidden py-16 sm:py-24">
-  <div class="aurora-background"></div>
-
-  <div class="container mx-auto px-4 relative z-10">
-    <header class="text-center mb-12 md:mb-16" data-aos="fade-down">
-      <h2 class="text-3xl md:text-4xl font-bold text-slate-800 tracking-tight">
-        The Innovation Nexus
-      </h2>
-      <p class="mt-3 max-w-2xl mx-auto text-lg text-slate-600">
-        A dynamic ecosystem where creators, thinkers, and builders converge to share knowledge and shape the future. 🧠⚡
-      </p>
-    </header>
-
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-      <figure class="nexus-card" data-aos="fade-up" data-aos-delay="100">
-        <div class="card-icon-wrapper">
-          <svg class="h-10 w-10 text-yellow-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.562L16.25 22.5l-.648-1.938a3.375 3.375 0 00-2.685-2.685L11.25 18l1.938-.648a3.375 3.375 0 002.685-2.685L16.25 13.5l.648 1.938a3.375 3.375 0 002.685 2.685L21 18.75l-1.938.648a3.375 3.375 0 00-2.685 2.685z" />
-          </svg>
+        <div class="max-w-xl mx-auto card p-8 md:p-10">
+           <form action="https://formspree.io/f/xgvlvvnn" method="POST" class="contact-form"> 
+              <div class="mb-5">
+                <label for="email" class="block mb-2 text-gray-700">Your Email:</label> 
+                <input type="email" name="email" id="email" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary" placeholder="you@example.com" required> 
+              </div>
+              <div class="mb-6">
+                <label for="message" class="block mb-2 text-gray-700">Your Message:</label> 
+                <textarea name="message" id="message" rows="4" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary" placeholder="Let's build something amazing together!" required></textarea> 
+              </div>
+              <button type="submit" class="w-full">Send Message</button> 
+            </form>
         </div>
-        <figcaption class="text-center">
-          <h3 class="text-xl font-semibold text-slate-800">Inquiry</h3>
-          <p class="mt-2 text-slate-600">Champion bold questions and drive discovery beyond the known.</p>
-        </figcaption>
-      </figure>
+        
+  <div class="max-w-4xl mx-auto mt-16" data-aos="fade-up">
+            <div class="card p-8 md:p-10 text-center">
+                <h2 class="text-3xl font-bold mb-3" style="font-family: var(--header-font); color: var(--primary);">
+                    Let's Connect & Collaborate
+                </h2>
+                <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                    This is a space to ask questions, share ideas, and build together. Every voice adds value.
+                </p>
 
-  <figure class="nexus-card" data-aos="fade-up" data-aos-delay="200">
-        <div class="card-icon-wrapper">
-          <svg class="h-10 w-10 text-sky-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
-          </svg>
+   <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-left">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <svg class="h-8 w-8 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.562L16.25 22.5l-.648-1.938a3.375 3.375 0 00-2.685-2.685L11.25 18l1.938-.648a3.375 3.375 0 002.685-2.685L16.25 13.5l.648 1.938a3.375 3.375 0 002.685 2.685L21 18.75l-1.938.648a3.375 3.375 0 00-2.685 2.685z" /></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-slate-800">Inquiry</h3>
+                            <p class="mt-1 text-slate-600">Champion bold questions and drive discovery.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                           <svg class="h-8 w-8 text-sky-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" /></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-slate-800">Synergy</h3>
+                            <p class="mt-1 text-slate-600">Fuse diverse talents to engineer solutions.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <svg class="h-8 w-8 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-slate-800">Integrity</h3>
+                            <p class="mt-1 text-slate-600">Foster a culture of respectful discourse.</p>
+                        </div>
+                    </div>
+                </div>
+
+  <div class="text-center py-12 border-2 border-dashed border-slate-300 rounded-lg bg-slate-50">
+                    <p class="text-slate-500 font-medium">[Giscus Forum Component Mounts Here]</p>
+                </div>
+            </div>
         </div>
-        <figcaption class="text-center">
-          <h3 class="text-xl font-semibold text-slate-800">Synergy</h3>
-          <p class="mt-2 text-slate-600">Fuse diverse talents and resources to engineer groundbreaking solutions.</p>
-        </figcaption>
-     </figure>
-
-   <figure class="nexus-card" data-aos="fade-up" data-aos-delay="300">
-        <div class="card-icon-wrapper">
-          <svg class="h-10 w-10 text-emerald-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-        </div>
-        <figcaption class="text-center">
-          <h3 class="text-xl font-semibold text-slate-800">Integrity</h3>
-          <p class="mt-2 text-slate-600">Foster a culture of respect where constructive and inclusive discourse thrives.</p>
-        </figcaption>
-      </figure>
-    </div>
-
- <article class="max-w-5xl mx-auto p-8 bg-slate-50/70 backdrop-blur-lg rounded-xl border border-slate-200 shadow-xl" data-aos="zoom-in-up">
-      <header class="text-center mb-6">
-        <h3 class="text-2xl font-bold text-slate-800">
-          Engage with the Community
-        </h3>
-        <p class="mt-2 text-slate-600">
-        Deploy your projects, troubleshoot complex problems, or find collaborators for your next big idea.
-        </p>
-  </header>
-      
- <div class="text-center py-12 border-2 border-dashed border-slate-300 rounded-lg bg-slate-100/50">
-        <p class="text-slate-500 font-medium">[Giscus Forum Component Mounts Here]</p>
-      </div>
-    </article>
-    
-  </div>
-</section>
-
-<style>
-  /* Define CSS variables for easier theming and consistency */
-  :root {
-    --glow-color: hsl(210, 100%, 75%);
-    --aurora-bg: radial-gradient(40% 50% at 10% 20%, #a7f3d0 0%, #a5b4fc00 100%),
-                 radial-gradient(40% 50% at 80% 30%, #fde047 0%, #a5b4fc00 100%),
-                 radial-gradient(50% 60% at 50% 90%, #67e8f9 0%, #a5b4fc00 100%);
-  }
-
-  /* Animated Aurora Background Effect */
-  .aurora-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #f1f5f9; /* Fallback color */
-    background-image: var(--aurora-bg);
-    animation: aurora-flow 20s linear infinite;
-    z-index: 0;
-  }
-
-  @keyframes aurora-flow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-
-  /* Glassmorphism Card Styling with Glow Effect */
-  .nexus-card {
-    position: relative;
-    padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-  }
-
-  /* Pseudo-element for the glowing border */
-  .nexus-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 1rem;
-    border: 2px solid transparent;
-    background: conic-gradient(from var(--angle), transparent 0%, var(--glow-color) 20%, transparent 35%) border-box;
-    mask:
-      linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-    animation: rotate-glow 5s linear infinite paused;
-  }
-
-  /* Animate border on hover */
-  .nexus-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  }
-
-  .nexus-card:hover::before {
-    opacity: 1;
-    animation-play-state: running;
-  }
-
-  @property --angle {
-    syntax: '<angle>';
-    initial-value: 0deg;
-    inherits: false;
-  }
-
-  @keyframes rotate-glow {
-    to { --angle: 360deg; }
-  }
-  
-  /* Icon Wrapper and Animation */
-  .card-icon-wrapper {
-    margin: 0 auto 1.5rem auto;
-    width: fit-content;
-    animation: float 4s ease-in-out infinite;
-  }
-  
-  .nexus-card:nth-of-type(2) .card-icon-wrapper {
-    animation-delay: 0.5s;
-  }
-  .nexus-card:nth-of-type(3) .card-icon-wrapper {
-    animation-delay: 1s;
-  }
-
-  @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
-  }  
-
-</style>
-       </div>
     </section>
-     <footer class="footer text-center py-10">
+
+  <footer class="footer text-center py-10">
         <div>© 2025 Clyde Snyders — All rights reserved.</div>
     </footer>
-     <div id="lightbox-modal" class="modal-overlay">
+
+  <div id="lightbox-modal" class="modal-overlay">
         <div class="modal-content-wrapper">
             <span class="modal-close-btn" id="lightbox-close-btn">&times;</span>
-            <img class="lightbox-content" src="" alt="Enlarged image view">
+            <img class="lightbox-content" src="" alt="Enlarged gallery image">
         </div>
     </div>
- <div id="blog-modal" class="modal-overlay">
+    <div id="blog-modal" class="modal-overlay">
         <div class="modal-content-wrapper">
             <span class="modal-close-btn" id="blog-close-btn">&times;</span>
             <div class="blog-modal-content">
@@ -951,13 +837,15 @@
             </div>
         </div>
     </div>
-  <a href="#home" id="back-to-top" title="Back to Top">
-        <i class="fas fa-arrow-up"></i>
+
+<a href="#home" id="back-to-top" title="Back to Top">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
     </a>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-   <script>
+ <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+ <script>
         // --- MASTER SCRIPT FOR ALL PAGE FUNCTIONALITY ---
         document.addEventListener('DOMContentLoaded', () => {
             
@@ -1050,20 +938,6 @@ click the link to see the post https://www.facebook.com/100063838813751/posts/12
                 }
             ];
             
-            const quotes = [
-                { quote: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
-                { quote: "Believe you can and you're halfway there.", author: "Theodore Roosevelt" },
-                { quote: "The best way to predict the future is to create it.", author: "Peter Drucker" },
-                { quote: "Success is not final, failure is not fatal: it is the courage to continue that counts.", author: "Winston Churchill" },
-                { quote: "The secret of getting ahead is getting started.", author: "Mark Twain" },
-                { quote: "Don't watch the clock; do what it does. Keep going.", author: "Sam Levenson" },
-                { quote: "Innovation distinguishes between a leader and a follower.", author: "Steve Jobs" },
-                { quote: "The road to success and the road to failure are almost exactly the same.", author: "Colin R. Davis" },
-                { quote: "Strive not to be a success, but rather to be of value.", author: "Albert Einstein" },
-                { quote: "I have not failed. I've just found 10,000 ways that won't work.", author: "Thomas A. Edison" },
-                { quote: "What you get by achieving your goals is not as important as what you become by achieving your goals.", author: "Zig Ziglar" }
-            ];
-
             // --- PRELOADER ---
             const preloader = document.getElementById('preloader');
             window.addEventListener('load', () => {
@@ -1145,45 +1019,40 @@ click the link to see the post https://www.facebook.com/100063838813751/posts/12
             const blogModalBody = document.getElementById('blog-modal-body');
             const blogCloseBtn = document.getElementById('blog-close-btn');
 
-            // Dynamically create blog cards
-            blogPosts.forEach(post => {
-                const card = document.createElement('div');
-                card.className = 'blog-card';
-                card.setAttribute('data-aos', 'fade-up');
-                card.innerHTML = `
-                    <img src="${post.image}" alt="Blog Post Image" class="blog-image">
-                    <div class="blog-card-content">
-                        <div class="blog-meta">${post.meta}</div>
-                        <h3 class="blog-title">${post.title}</h3>
-                        <p class="blog-excerpt">${post.excerpt}</p>
-                        <a class="read-more-btn" data-post-id="${post.id}">Read More &rarr;</a>
-                    </div>
-                `;
-                blogGrid.appendChild(card);
-            });
-            
-            // Add click event listener to blog images
-            const blogImages = document.querySelectorAll('.blog-image');
-            blogImages.forEach(img => {
-                img.addEventListener('click', () => {
-                    lightboxModal.style.display = 'flex';
-                    lightboxContent.src = img.src;
+            if (blogGrid) {
+                blogPosts.forEach(post => {
+                    const card = document.createElement('div');
+                    card.className = 'blog-card';
+                    card.setAttribute('data-aos', 'fade-up');
+                    card.innerHTML = `
+                        <img src="${post.image}" alt="${post.title}" class="blog-image">
+                        <div class="blog-card-content">
+                            <div class="blog-meta">${post.meta}</div>
+                            <h3 class="blog-title">${post.title}</h3>
+                            <p class="blog-excerpt">${post.excerpt}</p>
+                            <a class="read-more-btn" data-post-id="${post.id}">Read More &rarr;</a>
+                        </div>
+                    `;
+                    blogGrid.appendChild(card);
                 });
-            });
-
-            // Add event listeners for "Read More"
-            document.querySelectorAll('.read-more-btn').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    const postId = parseInt(e.target.dataset.postId);
-                    const post = blogPosts.find(p => p.id === postId);
-                    if (post) {
-                        blogModalTitle.textContent = post.title;
-                        blogModalMeta.textContent = post.meta;
-                        blogModalBody.innerHTML = post.fullContent;
-                        blogModal.style.display = 'flex';
+                
+                blogGrid.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('blog-image')) {
+                        lightboxModal.style.display = 'flex';
+                        lightboxContent.src = e.target.src;
+                    }
+                    if (e.target.classList.contains('read-more-btn')) {
+                        const postId = parseInt(e.target.dataset.postId);
+                        const post = blogPosts.find(p => p.id === postId);
+                        if (post) {
+                            blogModalTitle.textContent = post.title;
+                            blogModalMeta.textContent = post.meta;
+                            blogModalBody.innerHTML = post.fullContent;
+                            blogModal.style.display = 'flex';
+                        }
                     }
                 });
-            });
+            }
             
             const closeBlogModal = () => blogModal.style.display = 'none';
             blogModal.addEventListener('click', (e) => {
@@ -1232,26 +1101,22 @@ click the link to see the post https://www.facebook.com/100063838813751/posts/12
             const animateCounters = () => {
                 const counters = document.querySelectorAll('.counter');
                 counters.forEach(counter => {
-                    const updateCount = () => {
-                        const target = +counter.getAttribute('data-count');
-                        const count = +counter.innerText.replace('%','');
-                        const increment = target / 200; // Speed of animation
-                        
-                        if (count < target) {
-                            let newCount = count + increment;
-                            if (target % 1 !== 0) { // Check if target is a float
-                                counter.innerText = newCount.toFixed(2);
-                            } else {
-                                counter.innerText = Math.ceil(newCount);
-                            }
-                            setTimeout(updateCount, 1);
-                        } else {
-                            counter.innerText = target;
-                        }
-                    };
                      const observer = new IntersectionObserver((entries) => {
                         if (entries[0].isIntersecting) {
                             counter.innerText = '0';
+                            const updateCount = () => {
+                                const target = +counter.getAttribute('data-count');
+                                const count = +counter.innerText;
+                                const increment = target / 200;
+                                
+                                if (count < target) {
+                                    let newCount = count + increment;
+                                    counter.innerText = target % 1 !== 0 ? newCount.toFixed(2) : Math.ceil(newCount);
+                                    setTimeout(updateCount, 1);
+                                } else {
+                                    counter.innerText = target;
+                                }
+                            };
                             updateCount();
                             observer.unobserve(counter);
                         }
@@ -1260,19 +1125,6 @@ click the link to see the post https://www.facebook.com/100063838813751/posts/12
                 });
             };
             animateCounters();
-            
-            // --- QUOTE GENERATOR ---
-            const quoteBtn = document.getElementById('generate-quote-btn');
-            const quoteEl = document.getElementById('quote-container');
-            const authorEl = document.getElementById('quote-author');
-            if(quoteBtn) {
-                quoteBtn.addEventListener('click', () => {
-                    const randomIndex = Math.floor(Math.random() * quotes.length);
-                    const newQuote = quotes[randomIndex];
-                    quoteEl.textContent = `"${newQuote.quote}"`;
-                    authorEl.textContent = `- ${newQuote.author}`;
-                });
-            }
         });
         
         // --- THREE.JS SCENE ---
