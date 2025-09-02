@@ -509,7 +509,7 @@
             <div class="hero-subtitle">
                 Grade 9 Student | Paterson High School | Eastern Cape
             </div>
-            <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0021.jpg?raw=true" alt="Portrait of Clyde Snyders" class="mx-auto rounded-lg shadow-md mt-4 w-54 h-65">
+            <img src="https://github.com/clydesnyders05-oss/clydesnyders.github.io/blob/main/IMG-20250828-WA0021.jpg?raw=true" alt="Portrait of Clyde Snyders" class="mx-auto rounded-lg shadow-md mt-4 w-52 h-63">
             <div class="hero-subtitle-text">
                 <span id="typing-effect" class="text-xl md:text-2xl"></span>
             </div>
