@@ -1,0 +1,229 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Grade 9 Study Planner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F7F9FC;
+        }
+        .header-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .planner-card {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .planner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .subject-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+        .exam-day {
+            border: 2px solid #F56565;
+            background-color: #FFF5F5;
+        }
+        .exam-title {
+            color: #C53030;
+            font-weight: 700;
+        }
+        .public-holiday {
+            border: 2px solid #48BB78;
+            background-color: #F0FFF4;
+        }
+        .holiday-title {
+            color: #2F855A;
+            font-weight: 700;
+        }
+        .weekend {
+            background-color: #FAF5FF;
+        }
+        /* Custom Checkbox for Habit Tracker */
+        .habit-checkbox {
+            appearance: none;
+            width: 1.5rem;
+            height: 1.5rem;
+            border: 2px solid #D1D5DB;
+            border-radius: 0.375rem;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+        .habit-checkbox:checked {
+            background-color: #667eea;
+            border-color: #667eea;
+        }
+        .habit-checkbox:checked::after {
+            content: '✔';
+            font-size: 1rem;
+            color: white;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-7xl mx-auto">
+
+        <!-- Header Section -->
+        <div class="header-card text-white p-8 rounded-3xl mb-8 shadow-lg">
+            <div class="flex flex-wrap justify-between items-start gap-4">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold">My Grade 9 Exam Planner</h1>
+                    <p class="mt-2 text-lg opacity-90">Your personalized schedule for success! You've got this. 💪</p>
+                </div>
+                <a href="portfolio.html" target="_blank" class="bg-white/20 hover:bg-white/30 text-white font-bold py-3 px-5 rounded-xl transition duration-300 whitespace-nowrap shadow-md">
+                    View My Portfolio 🚀
+                </a>
+            </div>
+            <div id="countdown" class="mt-6 text-2xl font-semibold bg-white/20 px-4 py-2 rounded-xl inline-block">
+                <!-- Countdown will be injected by JS -->
+            </div>
+        </div>
+
+        <!-- Features Row -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <!-- Colour Key -->
+            <div class="planner-card p-6 col-span-1 md:col-span-2">
+                <h3 class="font-bold text-xl mb-4 text-gray-700">Subject Colour Key</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="subject-tag" style="background-color: #E9D8FD; color: #805AD5;">🧮 Mathematics</span>
+                    <span class="subject-tag" style="background-color: #FED7D7; color: #C53030;">🇬🇧 English</span>
+                    <span class="subject-tag" style="background-color: #FEEBC8; color: #DD6B20;">🇿🇦 Afrikaans</span>
+                    <span class="subject-tag" style="background-color: #C6F6D5; color: #2F855A;">🧪 Natural Sciences</span>
+                    <span class="subject-tag" style="background-color: #BEE3F8; color: #2B6CB0;">📜 History</span>
+                    <span class="subject-tag" style="background-color: #B2F5EA; color: #2C7A7B;">💰 EMS</span>
+                    <span class="subject-tag" style="background-color: #CBD5E0; color: #4A5568;">🧠 General Revision</span>
+                    <span class="subject-tag" style="background-color: #FED7E2; color: #B83280;">🎉 Rest & Relax</span>
+                </div>
+            </div>
+            <!-- Habit Tracker -->
+            <div class="planner-card p-6">
+                <h3 class="font-bold text-xl mb-4 text-gray-700">Daily Habits</h3>
+                <div class="space-y-3">
+                    <label class="flex items-center"><input type="checkbox" class="habit-checkbox mr-3"> Slept 8+ hours</label>
+                    <label class="flex items-center"><input type="checkbox" class="habit-checkbox mr-3"> Drank 2L water</label>
+                    <label class="flex items-center"><input type="checkbox" class="habit-checkbox mr-3"> Ate healthy snacks</label>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Planner Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Planner cards will be injected here by JS -->
+        </div>
+    </div>
+
+    <script>
+        const plannerData = [
+            // PREP WEEK 1
+            { date: "2025-09-05", day: "Friday", type: "study", sessions: ["🇿🇦 Afrikaans: Poetry", "🧮 Maths: Algebra", "🧠 Plan your study weeks"], technique: "The Eisenhower Matrix: Prioritize tasks by urgency and importance." },
+            { date: "2025-09-06", day: "Saturday", type: "weekend", sessions: ["🧪 NS: Life & Living Things", "💰 EMS: The Economy", "🎉 Relaxing walk"], technique: "Mind Mapping: Visually organize information for NS." },
+            { date: "2025-09-07", day: "Sunday", type: "weekend", sessions: ["📜 History: Term 1-2 Review", "🎉 Family Time", "😴 Prep for the week"], technique: "Self-Explanation: Talk through the history concepts aloud." },
+            { date: "2025-09-08", day: "Monday", type: "study", sessions: ["🧮 Maths: Geometry", "🇬🇧 English: Transactional Writing", "🧪 NS: Summary Notes"], technique: "The Pomodoro Technique: 25 mins study, 5 mins break." },
+            { date: "2025-09-09", day: "Tuesday", type: "study", sessions: ["🇿🇦 Afrikaans: Taalwerk", "💰 EMS: Financial Literacy", "📜 History: Practice Essay"], technique: "Blurting: Write down everything you know about a topic from memory." },
+            { date: "2025-09-10", day: "Wednesday", type: "study", sessions: ["🧮 Maths: Final Practice Paper", "🧠 Quick review of all subjects", "🎉 Pack bag, relax"], technique: "Spaced Repetition: Review maths concepts from Monday." },
+            
+            // EXAM WEEK 1
+            { date: "2025-09-11", day: "Thursday", type: "exam", exam: "Mathematics", sessions: ["🧠 Light final review", "🎉 REST! Well done!", "🇬🇧 Prep for English"], technique: "Visualization: Mentally walk through the exam successfully." },
+            { date: "2025-09-12", day: "Friday", type: "exam", exam: "Afrikaans EAT / English HL", sessions: ["🧠 Light final review", "🎉 REST!", "🧪 Start NS revision"], technique: "Active Recall: Test yourself with flashcards for key terms." },
+            { date: "2025-09-13", day: "Saturday", type: "weekend", sessions: ["🧪 NS: Matter & Materials", "💰 EMS: Entrepreneurship", "🎉 Watch a movie"], technique: "The Feynman Technique: Explain a complex NS topic in simple terms." },
+            { date: "2025-09-14", day: "Sunday", type: "weekend", sessions: ["🇿🇦/🇬🇧 Prep for FAL paper", "💰 Final EMS revision", "😴 Early night"], technique: "Interleaving: Switch between studying English and Afrikaans." },
+            { date: "2025-09-15", day: "Monday", type: "exam", exam: "Natural Sciences (1hr)", sessions: ["🧠 Light final review", "🎉 REST!", "🇿🇦/🇬🇧 FAL Practice"], technique: "Just-in-Time Review: A final quick scan of your notes an hour before." },
+            { date: "2025-09-16", day: "Tuesday", type: "exam", exam: "Afrikaans FAL / English FAL", sessions: ["🧠 Light final review", "🎉 REST!", "💰 Start EMS revision"], technique: "Teach it: Pretend you're teaching the language rules to someone else." },
+            { date: "2025-09-17", day: "Wednesday", type: "exam", exam: "EMS (1hr)", sessions: ["🧠 Light final review", "🎉 REST!", "📜 Start History revision"], technique: "Summarization: Condense your EMS notes into one page." },
+            { date: "2025-09-18", day: "Thursday", type: "study", sessions: ["📜 History: Deep Dive", "🧪 NS: Review for Paper 2", "🧠 General Revision"], technique: "SQ3R Method: Survey, Question, Read, Recite, Review your history textbook." },
+            { date: "2025-09-19", day: "Friday", type: "exam", exam: "History (1hr)", sessions: ["🧠 Light final review", "🎉 REST!", "🧪 Start NS Paper 2 revision"], technique: "Storytelling: Turn historical events into a story to remember them." },
+
+            // EXAM WEEK 2
+            { date: "2025-09-20", day: "Saturday", type: "weekend", sessions: ["🧪 NS (P2): Planet Earth & Beyond", "🧠 Review all past mistakes", "🎉 Go out with friends"], technique: "Past Papers: Do a full NS paper under exam conditions." },
+            { date: "2025-09-21", day: "Sunday", type: "weekend", sessions: ["🧪 NS (P2): Final review", "🎉 Relax", "😴 Early night"], technique: "Brain Dump: Write everything you know about the topic before looking at your notes." },
+            { date: "2025-09-22", day: "Monday", type: "exam", exam: "Natural Sciences (1hr)", sessions: ["🧠 Light final review", "🎉 REST!", "🇬🇧 Prep for English P3"], technique: "Mnemonics: Create acronyms or songs for scientific processes." },
+            { date: "2025-09-23", day: "Tuesday", type: "holiday", holiday: "Public Holiday", sessions: ["🇬🇧 English P3: Practice", "🎉 Enjoy the holiday!", "🇿🇦 Light Afrikaans P3 prep"], technique: "Chunking: Break down your P3 study material into smaller, manageable parts." },
+            { date: "2025-09-24", day: "Wednesday", type: "study", sessions: ["🇬🇧 English P3: Final practice", "🇿🇦 Afrikaans P3: Focus session", "🎉 Pack your bag"], technique: "Peer Review: Swap a practice essay with a friend and give feedback." },
+            { date: "2025-09-25", day: "Thursday", type: "exam", exam: "English HL/FAL P3", sessions: ["🧠 Light final review", "🎉 REST!", "🇿🇦 Final Afrikaans P3 review"], technique: "Keyword Association: Link key themes to specific words for quick recall." },
+            { date: "2025-09-26", day: "Friday", type: "exam", exam: "Afrikaans HL/FAL P3", sessions: ["🧠 Light final review", "🎉 YOU ARE DONE! 🎉", "🥳 CELEBRATE!"], technique: "Self-Care: Reward yourself for all your hard work. You've earned it!" }
+        ];
+
+        const plannerGrid = document.querySelector('.grid.grid-cols-1');
+
+        plannerData.forEach(item => {
+            let cardClasses = 'planner-card p-6 flex flex-col';
+            let titleHtml = '';
+            
+            if (item.type === 'exam') {
+                cardClasses += ' exam-day';
+                titleHtml = `<h3 class="exam-title text-lg uppercase tracking-wider">EXAM DAY</h3><p class="text-2xl font-bold text-gray-800">${item.exam}</p>`;
+            } else if (item.type === 'holiday') {
+                cardClasses += ' public-holiday';
+                titleHtml = `<h3 class="holiday-title text-lg uppercase tracking-wider">${item.holiday}</h3>`;
+            } else {
+                 if (item.type === 'weekend') cardClasses += ' weekend';
+                titleHtml = `<p class="text-2xl font-bold text-gray-800">${item.day}</p>`;
+            }
+
+            const card = `
+                <div class="${cardClasses}">
+                    <div class="mb-4">
+                        <p class="text-sm font-semibold text-gray-500">${new Date(item.date).toLocaleDateString('en-ZA', { month: 'long', day: 'numeric' })}</p>
+                        ${titleHtml}
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="font-semibold text-gray-600 mb-2">Today's Focus:</h4>
+                        <ul class="space-y-2 text-gray-700">
+                            ${item.sessions.map(s => `<li class="p-2 bg-gray-50 rounded-lg">${s}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-200">
+                         <h4 class="font-semibold text-sm text-indigo-600 mb-1">💡 Study Tip:</h4>
+                         <p class="text-sm text-gray-600">${item.technique}</p>
+                    </div>
+                </div>
+            `;
+            plannerGrid.innerHTML += card;
+        });
+        
+        // Countdown Timer
+        const firstExamDate = new Date("2025-09-11T08:00:00");
+        const countdownElement = document.getElementById('countdown');
+
+        function updateCountdown() {
+            const now = new Date();
+            const diff = firstExamDate - now;
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+            if (diff > 0) {
+                 countdownElement.innerHTML = `<span>${days} days, ${hours} hours, ${minutes} mins until first exam!</span>`;
+            } else {
+                countdownElement.innerHTML = `<span>Good luck! Exams are in session!</span>`;
+            }
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+    </script>
+</body>
+</html>
+
