@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="The professional portfolio for Clyde Snyders, a Grade 9 student from Paterson High School specializing in STEM, robotics, and science." />
+    <meta name="description" content="The professional portfolio for Clyde Snyders, a Grade 9 student from Paterson High School (PHS) specializing in STEM, robotics, and science." />
     <title>Clyde Snyders - Student & Innovator Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
