@@ -1,0 +1,21 @@
+:root {
+    --primary: #0052cc;
+    --secondary: #0d8fff;
+    --accent: #fde68a;
+    --light-bg: #f8f9fa;
+    --text-main: #22223b;
+    --text-light: #6b7280;
+    --header-font: 'Montserrat', sans-serif;
+    --body-font: 'Roboto', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: var(--body-font);
+    background: var(--light-bg);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+/* Additional CSS styles go here */
